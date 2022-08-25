@@ -1,19 +1,25 @@
 # PGA Players Review Application
 
-This is a PGA player review application that track the perrformances of PGA top players.
+This is a PGA Top Players review application that track the perrformances of PGA Top 15 Players. Hope you enjoy my little application. Thank you!
 
 # Important Links
 
--[ERD]() -[Wireframes]() -[Trello Board]()
+-[ERD](https://miro.com/app/board/uXjVPcsr2JQ=/)
 
-- [Deployed API Server]() -[Deployed Frontend]()
+-[Wireframes](https://wireframe.cc/m9lS1I)
+
+-[Trello Board]()
+
+-[Deployed Backend API Server]()
+
+-[Deployed Frontend React]()
 
 ## Local Setup
 
 ### Frontend Configuration
 
-- Work in progress
+_Work in progress_
 
 ### Backend Configuration
 
--Work in Progress
+- Backend was created with Express JS and JavaScript. Database was created with PostgreSQL. Ranking of players are real data from PGA World Ranking.
