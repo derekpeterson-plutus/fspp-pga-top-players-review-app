@@ -1,5 +1,5 @@
 -- CONNECTING TO THE DATABASE
-\c d9ofgkv6951eiu; 
+\c devjngaf6e6ng2; 
 
 DROP TABLE IF EXISTS players;
 

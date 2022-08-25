@@ -1,5 +1,5 @@
 -- Connect to the database
-\c d9ofgkv6951eiu;
+\c devjngaf6e6ng2;
 
 INSERT INTO players (name, rank_this_week, rank_last_week, country, events, avg_points, total_points, money_earned, is_favorite, image) VALUES 
 ('Scottie Scheffler', 1, 1, 'USA', 52, 10.26, 533.53, '$14,046,910', true, 'https://media.bleacherreport.com/image/upload/w_800,h_533,c_fill/v1649635491/okdw8igolpkxrmgzzgvl.jpg'),
