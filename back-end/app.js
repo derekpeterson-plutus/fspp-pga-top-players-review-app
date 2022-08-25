@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   res.send('Welcome to PGA Top 15 Players Review App!');
 });
 
-//ERROR  404 ROUTE
+//ERROR 404 ROUTE
 app.get('*', (req, res) => {
   res.status(404).send('Something wrong! Page Not Found!');
 });

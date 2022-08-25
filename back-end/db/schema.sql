@@ -19,6 +19,7 @@ CREATE TABLE players (
     avg_points DECIMAL,
     total_points DECIMAL,
     money_earned TEXT NOT NULL,
+    is_favorite BOOLEAN,
     image TEXT NOT NULL
 );
 

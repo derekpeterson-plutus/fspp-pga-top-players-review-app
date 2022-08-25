@@ -44,9 +44,27 @@ players.post('/', async (req, res) => {
   if (createdPlayer) {
     res.status(200).json({ success: true, payload: createdPlayer });
   } else {
-    res
-      .status(404)
-      .json({ success: false, payload: `A new player can not be added!` });
+    res.status(404).json({
+      success: false,
+      payload: `Sorry! A new player can not be added! Please try again!`,
+    });
+  }
+});
+
+//UPDATE ONE PLAYER WITH PUT METHOD
+players.put('/:id', async (req, res) => {
+  const { id } = req.params;
+  const { body } = req;
+
+  const updatedPlayer = await updatePlayer(id, body);
+
+  if (updatedPlayer.id) {
+    res.status(200).json({ success: true, payload: updatedPlayer });
+  } else {
+    res.status(404).json({
+      success: false,
+      payload: `Sorry! A player with id ${id} can not be updated! Please try again!`,
+    });
   }
 });
 
@@ -60,7 +78,7 @@ players.delete('/:id', async (req, res) => {
   } else {
     res.status(404).json({
       success: false,
-      payload: `A player with id ${id} can not be deleted!`,
+      payload: `A player with id ${id} can not be deleted! Please try again!`,
     });
   }
 });

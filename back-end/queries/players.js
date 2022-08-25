@@ -5,8 +5,8 @@ const getAllPlayers = async () => {
   try {
     const allPlayers = await db.any('SELECT * FROM players');
     return allPlayers;
-  } catch (err) {
-    return err.message;
+  } catch (error) {
+    return error.message;
   }
 };
 
@@ -14,9 +14,9 @@ const getAllPlayers = async () => {
 const getOnePlayer = async (id) => {
   try {
     const onePlayer = await db.one('SELECT * FROM players WHERE id = $1', id);
-    return player;
-  } catch (err) {
-    return err.message;
+    return onePlayer;
+  } catch (error) {
+    return error.message;
   }
 };
 
@@ -24,7 +24,7 @@ const getOnePlayer = async (id) => {
 const createNewPlayer = async (player) => {
   try {
     const newPlayer = await db.one(
-      'INSERT INTO players (name, rank_this_week, rank_last_week, country, events, avg_points, total_points, money_earned, image) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *',
+      'INSERT INTO players (name, rank_this_week, rank_last_week, country, events, avg_points, total_points, money_earned, is_favorite, image) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *',
       [
         player.name,
         player.rank_this_week,
@@ -34,12 +34,13 @@ const createNewPlayer = async (player) => {
         player.avg_points,
         player.total_points,
         player.money_earned,
+        player.is_favorite,
         player.image,
       ]
     );
     return newPlayer;
-  } catch (err) {
-    return err.message;
+  } catch (error) {
+    return error.message;
   }
 };
 
@@ -47,7 +48,7 @@ const createNewPlayer = async (player) => {
 const updatePlayer = async (id, player) => {
   try {
     const updatedPlayer = await db.one(
-      'UPDATE players SET name = $1 rank_this_week = $2, rank_last_week = $3, country = $4, avg_points = $5, total_points = $6, money_earned = $7, image = $8, image =  $9 WHERE RETURNING *',
+      'UPDATE players SET name=$1, rank_this_week=$2, rank_last_week=$3, country=$4, events=$5, avg_points=$6, total_points=$7, money_earned=$8, is_favorite=$9, image=$10 WHERE id=$11 RETURNING *',
       [
         player.name,
         player.rank_this_week,
@@ -57,13 +58,14 @@ const updatePlayer = async (id, player) => {
         player.avg_points,
         player.total_points,
         player.money_earned,
+        player.is_favorite,
         player.image,
         id,
       ]
     );
     return updatedPlayer;
-  } catch (err) {
-    return err.message;
+  } catch (error) {
+    return error.message;
   }
 };
 
@@ -75,8 +77,8 @@ const deletePlayer = async (id) => {
       id
     );
     return deletedPlayer;
-  } catch (err) {
-    return err.message;
+  } catch (error) {
+    return error.message;
   }
 };
 
