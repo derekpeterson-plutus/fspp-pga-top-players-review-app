@@ -10,7 +10,7 @@ This is a PGA Top Players review application that track the perrformances of PGA
 
 - [Trello Board]()
 
-- [Deployed Backend API Server](https://dry-wildwood-99333.herokuapp.com/)
+- [Deployed Backend API Server](https://top-pga-15.herokuapp.com/)
 
 - [Deployed Frontend React]()
 
