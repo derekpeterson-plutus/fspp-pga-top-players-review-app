@@ -16,8 +16,8 @@ CREATE TABLE players (
     rank_last_week INT DEFAULT 0,
     country TEXT NOT NULL,
     events INT DEFAULT 0,
-    avg_points DECIMAL,
-    total_points DECIMAL,
+    avg_points DECIMAL NOT NULL,
+    total_points DECIMAL NOT NULL,
     money_earned TEXT NOT NULL,
     is_favorite BOOLEAN,
     image TEXT NOT NULL

@@ -3,6 +3,12 @@ const express = require('express');
 const players = express.Router();
 
 const {
+  changeImageUrl,
+  checkBoolean,
+  checkValues,
+} = require('../validation/checkPlayers');
+
+const {
   getAllPlayers,
   getOnePlayer,
   createNewPlayer,
@@ -37,36 +43,48 @@ players.get('/:id', async (req, res) => {
 });
 
 //ADD ONE PLAYER
-players.post('/', async (req, res) => {
-  const newPlayer = req.body;
-  const createdPlayer = await createNewPlayer(newPlayer);
+players.post(
+  '/',
+  changeImageUrl,
+  checkBoolean,
+  checkValues,
+  async (req, res) => {
+    const newPlayer = req.body;
+    const createdPlayer = await createNewPlayer(newPlayer);
 
-  if (createdPlayer) {
-    res.status(200).json({ success: true, payload: createdPlayer });
-  } else {
-    res.status(404).json({
-      success: false,
-      payload: `Sorry! A new player can not be added! Please try again!`,
-    });
+    if (createdPlayer) {
+      res.status(200).json({ success: true, payload: createdPlayer });
+    } else {
+      res.status(404).json({
+        success: false,
+        payload: `Sorry! A new player can not be added! Please try again!`,
+      });
+    }
   }
-});
+);
 
 //UPDATE ONE PLAYER WITH PUT METHOD
-players.put('/:id', async (req, res) => {
-  const { id } = req.params;
-  const { body } = req;
+players.put(
+  '/:id',
+  changeImageUrl,
+  checkBoolean,
+  checkValues,
+  async (req, res) => {
+    const { id } = req.params;
+    const { body } = req;
 
-  const updatedPlayer = await updatePlayer(id, body);
+    const updatedPlayer = await updatePlayer(id, body);
 
-  if (updatedPlayer.id) {
-    res.status(200).json({ success: true, payload: updatedPlayer });
-  } else {
-    res.status(404).json({
-      success: false,
-      payload: `Sorry! A player with id ${id} can not be updated! Please try again!`,
-    });
+    if (updatedPlayer.id) {
+      res.status(200).json({ success: true, payload: updatedPlayer });
+    } else {
+      res.status(404).json({
+        success: false,
+        payload: `Sorry! A player with id ${id} can not be updated! Please try again!`,
+      });
+    }
   }
-});
+);
 
 //DELETE A PLAYER
 players.delete('/:id', async (req, res) => {
