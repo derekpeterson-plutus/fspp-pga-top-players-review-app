@@ -86,7 +86,7 @@ players.put(
   }
 );
 
-//DELETE A PLAYER
+//DELETE A PLAYER ROUTE
 players.delete('/:id', async (req, res) => {
   const { id } = req.params;
   const deletedPlayer = await deletePlayer(id);

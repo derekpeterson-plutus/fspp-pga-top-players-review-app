@@ -4,15 +4,15 @@ This is a PGA Top Players review application that track the perrformances of PGA
 
 # Important Links
 
--[ERD](https://miro.com/app/board/uXjVPcsr2JQ=/)
+- [ERD](https://miro.com/app/board/uXjVPcsr2JQ=/)
 
--[Wireframes](https://wireframe.cc/m9lS1I)
+- [Wireframes](https://wireframe.cc/m9lS1I)
 
--[Trello Board]()
+- [Trello Board]()
 
--[Deployed Backend API Server]()
+- [Deployed Backend API Server](https://dry-wildwood-99333.herokuapp.com/)
 
--[Deployed Frontend React]()
+- [Deployed Frontend React]()
 
 ## Local Setup
 
@@ -22,4 +22,4 @@ _Work in progress_
 
 ### Backend Configuration
 
-- Backend was created with Express JS and JavaScript. Database was created with PostgreSQL. Ranking of players are real data from PGA World Ranking.
+- Backend was created with Express, Node JS and JavaScript. Database was created with PostgreSQL. Ranking of players are real data from PGA World Ranking.
