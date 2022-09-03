@@ -1,19 +1,3 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// const NavBar = () => {
-//   return (
-//     <nav className='flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed'>
-//       <Link to='/'>Home</Link>
-//       <Link to='/players'>Players</Link>
-//       <Link to='/contact'>Contact</Link>
-//       <Link to='/players/new'>Add Player</Link>
-//     </nav>
-//   );
-// };
-
-// export default NavBar;
-
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
