@@ -24,8 +24,6 @@ function App() {
         <Route path='/players/:id' element={<Show />} />
         <Route path='/players/:id/edit' element={<Edit />} />
       </Routes>
-      {/* <Footer /> */}
-      {/* <SocialLinks /> */}
     </div>
   );
 }
