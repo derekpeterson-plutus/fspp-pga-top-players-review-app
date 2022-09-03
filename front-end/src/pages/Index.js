@@ -4,7 +4,7 @@ import Players from '../components/Players';
 const Index = () => {
   return (
     <div>
-      <h1>All Players</h1>
+      <h1>Welcome to Top 15 PGA Players!</h1>
       <Players />
     </div>
   );
