@@ -80,6 +80,28 @@ const PlayerEditForm = () => {
           ></input>
         </div>
         <div>
+          <label htmlFor='rank_this_week'>Rank This Week:</label>
+          <input
+            id='rank_this_week'
+            type='number'
+            value={player.rank_this_week}
+            onChange={handleTextChange}
+            className='my-4 p-2 bg-transparent border-2 rounded-md text-black focus:outline-none'
+            required
+          ></input>
+        </div>
+        <div>
+          <label htmlFor='rank_last_week'>Rank Last Week:</label>
+          <input
+            id='rank_last_week'
+            type='number'
+            value={player.rank_last_week}
+            onChange={handleTextChange}
+            className='my-4 p-2 bg-transparent border-2 rounded-md text-black focus:outline-none'
+            required
+          ></input>
+        </div>
+        <div>
           <label htmlFor='protein'>Events:</label>
           <input
             id='events'
