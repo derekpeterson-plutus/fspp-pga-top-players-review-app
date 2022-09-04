@@ -2,11 +2,11 @@
 const express = require('express');
 const players = express.Router();
 
-// const {
-//   changeImageUrl,
-//   checkBoolean,
-//   checkValues,
-// } = require('../validation/checkPlayers');
+const {
+  changeImageUrl,
+  checkBoolean,
+  checkValues,
+} = require('../validation/checkPlayers');
 
 const {
   getAllPlayers,
@@ -45,9 +45,9 @@ players.get('/:id', async (req, res) => {
 //ADD ONE PLAYER
 players.post(
   '/',
-  // changeImageUrl,
-  // checkBoolean,
-  // checkValues,
+  changeImageUrl,
+  checkBoolean,
+  checkValues,
   async (req, res) => {
     const newPlayer = req.body;
     const createdPlayer = await createNewPlayer(newPlayer);
@@ -66,9 +66,9 @@ players.post(
 //UPDATE ONE PLAYER WITH PUT METHOD
 players.put(
   '/:id',
-  // changeImageUrl,
-  // checkBoolean,
-  // checkValues,
+  changeImageUrl,
+  checkBoolean,
+  checkValues,
   async (req, res) => {
     const { id } = req.params;
     const { body } = req;
