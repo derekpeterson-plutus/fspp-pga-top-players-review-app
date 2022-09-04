@@ -17,12 +17,6 @@ const checkValues = (req, res, next) => {
     : res.status(400).json({
         error: "Player's name is required! Please enter player's name!",
       });
-
-  req.body.country
-    ? next()
-    : res.status(404).json({
-        error: "Player's country is required! Please enter player's country!",
-      });
 };
 
 const checkBoolean = (req, res, next) => {
