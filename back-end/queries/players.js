@@ -4,8 +4,10 @@ const db = require('../db/dbConfig');
 const getAllPlayers = async () => {
   try {
     const allPlayers = await db.any('SELECT * FROM players');
+    //console.log('Get all players here:', allPlayers);
     return allPlayers;
   } catch (error) {
+    //console.log('Error message here:', error);
     return error.message;
   }
 };
