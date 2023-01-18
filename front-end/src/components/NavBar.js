@@ -1,6 +1,7 @@
+import './Navbar.scss';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -29,35 +30,33 @@ const NavBar = () => {
   ];
 
   return (
-    <div className='flex justify-between items-center w-full h-20 text-gray-800 sticky top-0 z-50 bg-gradient-to-b from-cyan-500 to-blue-500'>
-      <div>
-        <h1 className='text-3xl ml-2 cursor-pointer'>
-          <Link to='/players'>🏌️ Top PGA Here ⛳️</Link>
+    <div className='navbar'>
+      <div className='navbar__left'>
+        <h1 className='navbar__logo'>
+          <Link to='/players'>🏌️</Link>
         </h1>
       </div>
-      <ul className='hidden md:flex'>
+
+      <ul className='navbar__links'>
         {links.map(({ id, link }) => (
-          <li
-            key={id}
-            className='text-2xl px-5 cursor-pointer capitalize font-xl font-bold hover:text-black hover:scale-125 duration-200'
-          >
+          <li key={id} className='navbar__link'>
             {link}
           </li>
         ))}
       </ul>
+
       <div
         onClick={() => setNav(!nav)}
-        className='cursor-pointer pr-4 z-10 hover:scale-125 text-gray-300 md:hidden hover:text-white'
+        className='cursor-pointer pr-4 z-10 text-gray-300 md:hidden hover:text-white'
       >
-        {nav ? <FaTimes size={40} /> : <FaBars size={40} />}
+        {nav ? <FaTimes size={25} /> : <FaBars size={25} />}
       </div>
-
       {nav && (
-        <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-cyan-600 bg-blue-600 text-gray-200 hover:font-bold hover:text-white'>
+        <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-[#062146] text-[#bab9b9]'>
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className='px-4 cursor-pointer capitalize py-6 text-4xl hover:scale-125'
+              className='px-4 cursor-pointer capitalize py-6 text-2xl hover:text-white'
             >
               <Link onClick={() => setNav(!nav)} to={link}>
                 {link}
@@ -66,6 +65,10 @@ const NavBar = () => {
           ))}
         </ul>
       )}
+      <div className='navbar__right'>
+        <p>Login</p>
+        <FaSearch size={16} />
+      </div>
     </div>
   );
 };

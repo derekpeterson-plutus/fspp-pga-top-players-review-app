@@ -1,0 +1,45 @@
+.navbar {
+    height: 50px;
+    display: flex;
+    font-size: 14px;
+    color: #E4E4E4;
+    align-items: center;
+    background: #133d7a;
+    text-transform: uppercase;
+    justify-content: space-between;
+    background: linear-gradient(90deg,#133d7a 0%, #13457b 0%, #133d7d 0%);
+    background: -moz-linear-gradient(90deg,#133d7a 0%, #13457b 0%, #133d7d 0%);
+    background: -webkit-linear-gradient(90deg,#133d7a 0%, #13457b 0%, #133d7d 0%);
+
+    &__left {
+        margin-left: 10px;
+        h1 {
+            font-size: 25px;
+        }
+    }
+
+    &__links {
+        gap: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__right {
+        gap: 20px;
+        display: flex;
+        cursor: pointer;
+        margin-right: 20px;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+
+
+
