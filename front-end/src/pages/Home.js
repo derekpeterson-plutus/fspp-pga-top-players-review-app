@@ -22,13 +22,12 @@ const Home = () => {
   return (
     <div>
       <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-2 sm:px-0 cursor-pointer ml-10 mb-10 mt-10 mr-10'>
-        {players.map((player) => {
+        {players.map((player, id) => {
           return (
-            <Link to={`/players/${player.id}`}>
+            <Link key={id} to={`/players/${player.id}`}>
               <img
-                key={players.id}
-                src={player.image}
                 alt={player.name}
+                src={player.image}
                 className='w-60 h-40 rounded-md'
               />
             </Link>

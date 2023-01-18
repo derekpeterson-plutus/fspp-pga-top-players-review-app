@@ -33,7 +33,7 @@ const NavBar = () => {
     <div className='navbar'>
       <div className='navbar__left'>
         <h1 className='navbar__logo'>
-          <Link to='/players'>🏌️</Link>
+          <Link to='/'>🏌️</Link>
         </h1>
       </div>
 
