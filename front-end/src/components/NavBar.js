@@ -1,73 +1,122 @@
 import './Navbar.scss';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import { VscSearch } from 'react-icons/vsc';
 import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
+  const [showSearchForm, setShowSearchForm] = useState(false);
+  const [activeNavbarLink, setActiveNavbarLink] = useState(null);
 
   const links = [
     {
       id: 1,
-      link: <Link to='/'>home</Link>,
+      link: <Link to='/'>Home</Link>,
     },
     {
       id: 2,
-      link: <Link to='/players'>players</Link>,
+      link: <Link to='/players'>Players</Link>,
     },
     {
       id: 3,
-      link: <Link to='/players/new'>Add Player</Link>,
+      link: <Link to='/players/new'>More</Link>,
     },
     {
       id: 4,
-      link: <Link to='/about'>about</Link>,
+      link: <Link to='/videos'>Videos</Link>,
     },
     {
       id: 5,
-      link: <Link to='/contact'>contact</Link>,
+      link: <Link to='/watch'>Watch</Link>,
+    },
+    {
+      id: 6,
+      link: <Link to='/about'>About</Link>,
+    },
+    {
+      id: 7,
+      link: <Link to='/contact'>Contact</Link>,
     },
   ];
 
+  const toggleNavbarLinkColor = (e) => {
+    setActiveNavbarLink(e.target.id);
+  };
+
+  const toggleSearchForm = () => {
+    showSearchForm ? setShowSearchForm(false) : setShowSearchForm(true);
+  };
+
   return (
     <div className='navbar'>
-      <div className='navbar__left'>
-        <h1 className='navbar__logo'>
-          <Link to='/'>🏌️</Link>
-        </h1>
-      </div>
-
-      <ul className='navbar__links'>
-        {links.map(({ id, link }) => (
-          <li key={id} className='navbar__link'>
-            {link}
-          </li>
-        ))}
-      </ul>
-
-      <div
-        onClick={() => setNav(!nav)}
-        className='cursor-pointer pr-4 z-10 text-gray-300 md:hidden hover:text-white'
-      >
-        {nav ? <FaTimes size={25} /> : <FaBars size={25} />}
-      </div>
-      {nav && (
-        <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-[#062146] text-[#bab9b9]'>
+      <div className='navbar__container'>
+        <div className='navbar__left'>
+          <div title='Home' className='navbar__left-logo'>
+            <Link to='/'>🏌️</Link>
+          </div>
+          <div
+            onClick={() => setNav(!nav)}
+            className='cursor-pointer ml-2 pr-4 z-10 text-gray-300 md:hidden hover:text-white'
+          >
+            {nav ? <FaTimes size={18} /> : <FaBars size={18} />}
+          </div>
+          {nav && (
+            <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-[#062146] text-[#bab9b9]'>
+              {links.map(({ id, link }) => (
+                <li
+                  key={id}
+                  className='px-4 cursor-pointer uppercase py-6 text-2xl hover:text-white'
+                >
+                  <Link onClick={() => setNav(!nav)} to={link}>
+                    {link}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <ul className='navbar__links'>
           {links.map(({ id, link }) => (
-            <li
+            <div
+              id={id}
               key={id}
-              className='px-4 cursor-pointer capitalize py-6 text-2xl hover:text-white'
+              onClick={toggleNavbarLinkColor}
+              className={
+                activeNavbarLink === id ? 'navbar__link-active' : 'navbar__link'
+              }
             >
-              <Link onClick={() => setNav(!nav)} to={link}>
-                {link}
-              </Link>
-            </li>
+              <li>{link}</li>
+            </div>
           ))}
         </ul>
-      )}
-      <div className='navbar__right'>
-        <p>Login</p>
-        <FaSearch size={16} />
+        <div className='navbar__right'>
+          <div className='navbar__right-tours'>
+            <Link to='/tours'>Tours</Link>
+          </div>
+          <div className='navbar__right-login'>
+            <Link to='/login'>Login</Link>
+          </div>
+          <div className='navbar__right-search'>
+            <FaSearch size={13} title='Search' onClick={toggleSearchForm} />
+            {showSearchForm ? (
+              <div>
+                <form className='navbar__right-search_form'>
+                  <input
+                    type='text'
+                    placeholder='Search...'
+                    className='navbar__right-search_input'
+                  />
+                  <button type='submit'>
+                    <VscSearch />
+                  </button>
+                </form>
+              </div>
+            ) : (
+              <></>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

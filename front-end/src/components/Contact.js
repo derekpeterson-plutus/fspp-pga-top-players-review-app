@@ -4,18 +4,17 @@ const Contact = () => {
   return (
     <div
       name='contact'
-      className='h-screen w-full bg-gradient-to-b from-cyan-600 bg-blue-600 p-4 text-white'
+      className='h-screen w-full bg-[#d2d1d1] p-4 text-[#777777]'
     >
-      <div className='flex flex-col p-4 justify-center max-w-screen-lg mx-auto my-3 h-full ml-40'>
+      <div className='flex flex-col p-4 justify-center align-middle max-w-screen-lg mt-4 h-full ml-auto mr-auto'>
         <div className='pb-8'>
-          <p className='text-4xl font-bold inline border-b-4'>Contact</p>
           <p className='py-6'>Please fill in the form below</p>
         </div>
         <div className='flex justify-center items-center'>
           <form
-            action='https://getform.io/f/56ddf23b-a66b-45b9-bba7-eedfb5fc0edc'
             method='POST'
             className='flex flex-col w-full md:w-1/2'
+            action='https://getform.io/f/56ddf23b-a66b-45b9-bba7-eedfb5fc0edc'
           >
             <input
               type='text'

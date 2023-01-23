@@ -1,0 +1,80 @@
+.homePlayers {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d2d1d1;
+    
+    &__playerContainer {
+        display: grid;
+        column-gap: 20px;
+        padding: 10px 10px;
+        text-align: center;
+        border-radius: 10px;
+        margin-top: 80px auto;
+        max-width: max-content;
+        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+    }  
+      
+    &__playerDetails {
+        width: 250px;
+        margin: 30px;
+        display: flex;
+        margin-top: 70px;
+        min-height: 185px;
+        padding: 10px 20px;
+        align-items: center;
+        border-radius: 10px;
+        flex-direction: column;
+        background-color: #e0e0e0;
+        justify-content: space-between;
+        
+        img {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    
+    &__toggleDetails {
+        display: block;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 300;
+        color: #777777;
+        margin-top: 1em;
+    
+        &:hover {
+            color: black;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        &__playerContainer {
+            display: grid;
+            row-gap: 10px;
+            margin-top: 70px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        &__playerContainer {
+            display: grid;
+            row-gap: 10px;
+            margin-top: 70px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+
+}

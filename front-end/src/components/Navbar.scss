@@ -1,20 +1,45 @@
 .navbar {
-    height: 50px;
-    display: flex;
-    font-size: 14px;
-    color: #E4E4E4;
+    color: #d8d8d8;
     align-items: center;
     background: #133d7a;
-    text-transform: uppercase;
-    justify-content: space-between;
+    justify-content: center;
     background: linear-gradient(90deg,#133d7a 0%, #13457b 0%, #133d7d 0%);
     background: -moz-linear-gradient(90deg,#133d7a 0%, #13457b 0%, #133d7d 0%);
     background: -webkit-linear-gradient(90deg,#133d7a 0%, #13457b 0%, #133d7d 0%);
+    
+    &__container {
+        width: 100%;
+        height: 64px;
+        display: flex;
+        margin: 0 auto;
+        font-size: 15px;
+        max-width: 1320px;
+        text-align: center;
+        align-items: center;
+        text-transform: uppercase;
+        justify-content: space-between;
+    }
 
     &__left {
-        margin-left: 10px;
-        h1 {
-            font-size: 25px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-logo {
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &:hover {
+            color: white;
+            font-weight: 600;
+            background-color: #002146;
+            transition: all 0.3s ease-in;
         }
     }
 
@@ -26,18 +51,133 @@
 
         @media screen and (max-width: 768px) {
             display: none;
+        } 
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        font-weight: 400;
+        padding: 20px 16px;
+        white-space: nowrap;
+        letter-spacing: 0.15px;
+
+        &:hover, &:active {
+            color: white;
+            font-weight: 600;
+            background-color: #002146;
+            transition: all 0.3s ease-in;
         }
     }
 
+    &__link-active {
+        color: white;
+        font-weight: 600;
+        background-color: #002146;
+        transition: all 0.3s ease-in;
+
+    }
+
     &__right {
-        gap: 20px;
+        width: 100%;
         display: flex;
         cursor: pointer;
         margin-right: 20px;
         align-items: center;
         flex-direction: row;
         justify-content: center;
+
+        &-login {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            padding: 20px 8px;
+            align-items: center;
+            flex-direction: row;
+            white-space: nowrap;
+            justify-content: center;
+    
+            &:hover {
+                color: white;
+                background-color: #002146;
+            }
+        }
+    
+        &-search {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            padding: 24px 8px;
+            position: relative;
+            align-items: center;
+            flex-direction: row;
+            white-space: nowrap;
+            justify-content: center;
+
+            &:hover {
+                color: white;
+                background-color: #002146;  
+            }
+
+            &_form {
+                right: 0;
+                top: 100%;
+                display: flex;
+                padding: 0 35px;
+                color: #999;
+                margin: 0 auto;
+                bottom: -69.5px;
+                font-size: 12px;
+                min-width: 265px;
+                min-height: 60px;
+                position: absolute;
+                align-items: center;
+                background: #002146;
+                justify-content: center;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                
+                input {
+                    width: 300px;
+                    border: none;
+                    outline: none;
+                    margin: 0 auto;
+                    text-align: left;
+                    border-radius: 5px;
+                    padding: 10px 16px;
+                    background-color: #fff;
+                }
+
+                button {
+                    width: 16%;
+                    color: black;
+                    cursor: pointer;
+                    font-size: 15px;
+                    margin: 0 -20px;
+                    padding: 0 auto;
+                    font-weight: 600;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        &-tours {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            padding: 20px 8px;
+            align-items: center;
+            flex-direction: row;
+            white-space: nowrap;
+            justify-content: center;
+    
+            &:hover {
+                color: white;
+                background-color: #002146;
+            }
+        }
     }
+
 }
 
 

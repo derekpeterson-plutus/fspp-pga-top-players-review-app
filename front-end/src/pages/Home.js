@@ -1,12 +1,15 @@
+import './Home.scss';
 import axios from 'axios';
+import { FaPlus, FaMinus } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
 const API = process.env.REACT_APP_API_URL;
 
 const Home = () => {
-  let { id } = useParams();
+  const { id } = useParams();
   const [players, setPlayers] = useState([]);
+  const [showPlayerDetails, setShowPlayerDetails] = useState(false);
 
   useEffect(() => {
     axios
@@ -19,18 +22,45 @@ const Home = () => {
       });
   }, [id]);
 
+  const togglePlayerDetails = () => {
+    !showPlayerDetails
+      ? setShowPlayerDetails(true)
+      : setShowPlayerDetails(false);
+  };
+
   return (
-    <div>
-      <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-2 sm:px-0 cursor-pointer ml-10 mb-10 mt-10 mr-10'>
+    <div className='homePlayers'>
+      <div className='homePlayers__playerContainer'>
         {players.map((player, id) => {
           return (
-            <Link key={id} to={`/players/${player.id}`}>
-              <img
-                alt={player.name}
-                src={player.image}
-                className='w-60 h-40 rounded-md'
-              />
-            </Link>
+            <div key={id} className='homePlayers__playerDetails'>
+              <Link key={id} to={`/players/${player.id}`}>
+                <img alt={player.name} src={player.image} title={player.name} />
+              </Link>
+              <div className='homePlayers__playerInfo'>
+                <div className='text-xl font-bold'>{player.name}</div>
+                <div className='homePlayers__player-country'>
+                  Country: <span>{player.country}</span>
+                </div>
+                <div>Ranking: {player.rank_this_week}</div>
+              </div>
+              <div className='homePlayers__toggleDetails'>
+                {!showPlayerDetails && (
+                  <FaPlus
+                    fontSize='inherit'
+                    title='Show More'
+                    onClick={togglePlayerDetails}
+                  />
+                )}
+                {showPlayerDetails && (
+                  <FaMinus
+                    fontSize='inherit'
+                    title='Show Less'
+                    onClick={togglePlayerDetails}
+                  />
+                )}
+              </div>
+            </div>
           );
         })}
       </div>
