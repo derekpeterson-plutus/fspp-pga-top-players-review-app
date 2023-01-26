@@ -11,7 +11,7 @@ import Watch from './components/Watch';
 import Videos from './components/Videos';
 import NavBar from './components/NavBar';
 import Contact from './components/Contact';
-import ErrorPage from './components/ErrorPage';
+//import ErrorPage from './components/ErrorPage';
 
 /******************** ROUTERS ********************/
 import { Routes, Route } from 'react-router-dom';
@@ -22,7 +22,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='*' element={<ErrorPage />} />
+        {/* <Route path='*' element={<ErrorPage />} /> */}
         <Route path='/about' element={<About />} />
         <Route path='/watch' element={<Watch />} />
         <Route path='/players' element={<Index />} />

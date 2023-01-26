@@ -4,8 +4,11 @@ import React, { useState } from 'react';
 import { VscSearch } from 'react-icons/vsc';
 import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
 
+import Login from './Login';
+
 const NavBar = () => {
   const [nav, setNav] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSearchForm, setShowSearchForm] = useState(false);
   const [activeNavbarLink, setActiveNavbarLink] = useState(null);
 
@@ -30,14 +33,14 @@ const NavBar = () => {
       id: 5,
       link: <Link to='/watch'>Watch</Link>,
     },
-    {
-      id: 6,
-      link: <Link to='/about'>About</Link>,
-    },
-    {
-      id: 7,
-      link: <Link to='/contact'>Contact</Link>,
-    },
+    // {
+    //   id: 6,
+    //   link: <Link to='/about'>About</Link>,
+    // },
+    // {
+    //   id: 7,
+    //   link: <Link to='/contact'>Contact</Link>,
+    // },
   ];
 
   const toggleNavbarLinkColor = (e) => {
@@ -46,6 +49,10 @@ const NavBar = () => {
 
   const toggleSearchForm = () => {
     showSearchForm ? setShowSearchForm(false) : setShowSearchForm(true);
+  };
+
+  const toggleLoginModal = () => {
+    setShowLoginModal((showLoginModal) => setShowLoginModal(!showLoginModal));
   };
 
   return (
@@ -62,7 +69,7 @@ const NavBar = () => {
             {nav ? <FaTimes size={18} /> : <FaBars size={18} />}
           </div>
           {nav && (
-            <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-[#062146] text-[#bab9b9]'>
+            <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-[#062146] text-[rgb(186,185,185)]'>
               {links.map(({ id, link }) => (
                 <li
                   key={id}
@@ -77,28 +84,44 @@ const NavBar = () => {
           )}
         </div>
         <ul className='navbar__links'>
-          {links.map(({ id, link }) => (
-            <div
-              id={id}
-              key={id}
-              onClick={toggleNavbarLinkColor}
-              className={
-                activeNavbarLink === id ? 'navbar__link-active' : 'navbar__link'
-              }
-            >
-              <li>{link}</li>
-            </div>
-          ))}
+          {links.map(({ id, link }) => {
+            console.log(id, activeNavbarLink)
+            return (
+              <div
+                id={id}
+                key={id}
+                onChange={toggleNavbarLinkColor}
+                className={
+                  activeNavbarLink == id ? 'navbar__link navbar__link-active' : 'navbar__link'
+                }
+              >
+                <li>{link}</li>
+              </div>
+            )}
+          )}
         </ul>
         <div className='navbar__right'>
-          <div className='navbar__right-tours'>
+          {/* <div className='navbar__right-tours'>
             <Link to='/tours'>Tours</Link>
+          </div> */}
+          <div className='navbar__right-login' onClick={toggleLoginModal}>
+            {!showLoginModal ? (
+              <Link to='/login'>
+                <Login />
+              </Link>
+            ) : (
+              'Login'
+            )}
           </div>
-          <div className='navbar__right-login'>
-            <Link to='/login'>Login</Link>
-          </div>
-          <div className='navbar__right-search'>
-            <FaSearch size={13} title='Search' onClick={toggleSearchForm} />
+          <div
+            onClick={toggleSearchForm}
+            className={
+              showSearchForm
+                ? 'navbar__right-search navbar__right-search-active'
+                : 'navbar__right-search'
+            }
+          >
+            <FaSearch size={13} title='Search' />
             {showSearchForm ? (
               <div>
                 <form className='navbar__right-search_form'>
