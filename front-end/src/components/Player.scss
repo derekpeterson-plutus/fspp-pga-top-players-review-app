@@ -1,0 +1,40 @@
+.player {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #b8b8b8;
+
+    &__container {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }  
+
+    &__details {
+        text-align: center;
+    }
+
+    &__info {
+        width: 240px;
+        color: #999;
+        margin-top: 30px;
+        min-height: 200px;
+        margin-left: auto;
+        border-radius: 8px;
+        margin-right: auto;
+        margin-bottom: 30px;
+        background-color: white;
+        
+        img {
+            width: 100%;
+            height: 200px;
+            margin: 0 auto;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+    }
+
+}

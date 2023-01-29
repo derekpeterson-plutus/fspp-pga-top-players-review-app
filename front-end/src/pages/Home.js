@@ -30,10 +30,10 @@ const Home = () => {
 
   return (
     <div className='homePlayers'>
-      <div className='homePlayers__playerContainer'>
+      <div className='homePlayers__container'>
         {players.map((player, id) => {
           return (
-            <div key={id} className='homePlayers__playerDetails'>
+            <div key={id} className='homePlayers__details'>
               <Link key={id} to={`/players/${player.id}`}>
                 <img alt={player.name} src={player.image} title={player.name} />
               </Link>

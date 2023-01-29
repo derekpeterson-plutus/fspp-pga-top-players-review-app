@@ -1,3 +1,4 @@
+import './Players.scss';
 import axios from 'axios';
 import Player from './Player';
 import React, { useState, useEffect } from 'react';
@@ -18,9 +19,14 @@ const Players = () => {
 
   return (
     <div>
-      <div className=' grid sm:grid-cols-3 md:grid-cols-4 sm:px-0 cursor-pointer text-white'>
+      <div className='players'>
         {players.map((player, index) => {
-          return <Player key={index} player={player} />;
+          return (
+            <div className='players__container'>
+
+          <Player key={index} player={player} />
+            </div>
+          )  
         })}
       </div>
     </div>

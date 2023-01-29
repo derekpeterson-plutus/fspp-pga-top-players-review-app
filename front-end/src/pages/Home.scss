@@ -6,19 +6,18 @@
     justify-content: center;
     background-color: #d2d1d1;
     
-    &__playerContainer {
+    &__container {
         display: grid;
-        column-gap: 20px;
         padding: 10px 10px;
         text-align: center;
-        border-radius: 10px;
+        border-radius: 8px;
         margin-top: 80px auto;
         max-width: max-content;
         justify-content: center;
         grid-template-columns: repeat(3, 1fr);
     }  
       
-    &__playerDetails {
+    &__details {
         width: 250px;
         margin: 30px;
         display: flex;
@@ -54,7 +53,7 @@
     }
     
     @media only screen and (max-width: 768px) {
-        &__playerContainer {
+        &__container {
             display: grid;
             row-gap: 10px;
             margin-top: 70px;
@@ -66,7 +65,7 @@
     }
 
     @media only screen and (max-width: 400px) {
-        &__playerContainer {
+        &__container {
             display: grid;
             row-gap: 10px;
             margin-top: 70px;

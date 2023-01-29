@@ -2,8 +2,8 @@
     top: 50%;
     left: 50%;
     float: left;
-    width: 400px;
-    height: 450px;
+    width: 432px;
+    height: 432px;
     margin: 0 auto;
     max-height: 80%;
     line-height: 35px;
@@ -18,6 +18,9 @@
     border-bottom-right-radius: 5px;
     border: 0.5px solid lightgray;
     transform: translate(-50%, -50%);
+    box-shadow: 2px 1px 16px 5px rgba(0,0,0,0.61);
+    -moz-box-shadow: 2px 1px 16px 5px rgba(0,0,0,0.61);
+    -webkit-box-shadow: 2px 1px 16px 5px rgba(0,0,0,0.61);
     
     &__header {
         display: flex;
@@ -63,25 +66,15 @@
                 box-sizing: border-box;
                 border: 0.5px solid #b6bdc5;
 
-                &:hover, &:focus {
+                &:focus, &:hover {
                     margin: 5px 1px 3px 0px;
                     padding: 3px 0px 3px 3px;
                     border: 1px solid #1d87ff;
                     box-shadow: 0 0 5px #1d87ff;
-                    transition: all 0.5s ease-out;
+                    transition: all 0.3s ease-in;
                 }
             }
         }
-        
-        // &__footer {
-            //     p {
-                //         display: flex;
-                //         color: black;
-        //         font-size: 10px;
-        //         flex-wrap: wrap;
-        //         padding: 20px 20px;
-        //     }
-        // }
     }
     
     &__reminder {
@@ -109,6 +102,13 @@
             text-align: center;
             align-items: center;
             background-color: #1d87ff;
+        }
+    }
+
+    @media only screen and (max-width: 440px) {
+        .loginModal {
+            width: 200px;
+            height: 200px;
         }
     }
 }

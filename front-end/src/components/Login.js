@@ -1,13 +1,23 @@
 import './Login.scss';
-import React from 'react';
+import React, {useState} from 'react';
 import { FaTimes } from 'react-icons/fa';
 
 const Login = () => {
+  
+  const [closeLoginModal, setCloseLoginModal] = useState(false);
+
+  const handleClose = () => setCloseLoginModal(true);
+
   return (
     <div className='loginModal'>
       <div className='loginModal__header'>
         <div className='loginModal__title'>Login</div>
-        <div className='loginModal_closeButton'><FaTimes /></div>
+        <div
+          onClick={handleClose}
+          className='loginModal__closeButton'
+        >
+          <FaTimes />
+        </div>
       </div>
       <div className='loginModal__body'>
         <div className='loginModal__form'>
@@ -26,7 +36,7 @@ const Login = () => {
           </div>
           <div className='loginModal__buttons'>
             <button type='button'>Submit</button>
-            <button type='button'>Create New Account</button>
+            <button type='button' className='loginModal__createButton'>Create New Account</button>
           </div>
         </div>
         {/* <div className='loginModal__footer'>

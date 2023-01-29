@@ -1,16 +1,16 @@
 import './Navbar.scss';
+import Login from './Login';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { VscSearch } from 'react-icons/vsc';
 import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
 
-import Login from './Login';
 
 const NavBar = () => {
+
   const [nav, setNav] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSearchForm, setShowSearchForm] = useState(false);
-  const [activeNavbarLink, setActiveNavbarLink] = useState(null);
 
   const links = [
     {
@@ -42,10 +42,6 @@ const NavBar = () => {
     //   link: <Link to='/contact'>Contact</Link>,
     // },
   ];
-
-  const toggleNavbarLinkColor = (e) => {
-    setActiveNavbarLink(e.target.id);
-  };
 
   const toggleSearchForm = () => {
     showSearchForm ? setShowSearchForm(false) : setShowSearchForm(true);
@@ -84,21 +80,15 @@ const NavBar = () => {
           )}
         </div>
         <ul className='navbar__links'>
-          {links.map(({ id, link }) => {
-            console.log(id, activeNavbarLink)
-            return (
-              <div
-                id={id}
-                key={id}
-                onChange={toggleNavbarLinkColor}
-                className={
-                  activeNavbarLink == id ? 'navbar__link navbar__link-active' : 'navbar__link'
-                }
-              >
-                <li>{link}</li>
-              </div>
-            )}
-          )}
+          {links.map(({ id, link }) => (
+            <div
+              id={id}
+              key={id}
+              className='navbar__link'
+            >
+              <li>{link}</li>
+            </div>
+          ))}
         </ul>
         <div className='navbar__right'>
           {/* <div className='navbar__right-tours'>
