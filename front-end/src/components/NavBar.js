@@ -1,5 +1,6 @@
 import './Navbar.scss';
 import Login from './Login';
+import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { VscSearch } from 'react-icons/vsc';
@@ -56,7 +57,7 @@ const NavBar = () => {
       <div className='navbar__container'>
         <div className='navbar__left'>
           <div title='Home' className='navbar__left-logo'>
-            <Link to='/'>🏌️</Link>
+            <Link to='/'><img alt='logo' src={logo}/></Link>
           </div>
           <div
             onClick={() => setNav(!nav)}

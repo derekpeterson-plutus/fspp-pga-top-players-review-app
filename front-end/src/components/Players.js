@@ -21,12 +21,7 @@ const Players = () => {
     <div>
       <div className='players'>
         {players.map((player, index) => {
-          return (
-            <div className='players__container'>
-
-          <Player key={index} player={player} />
-            </div>
-          )  
+          return <Player key={index} player={player} />;
         })}
       </div>
     </div>

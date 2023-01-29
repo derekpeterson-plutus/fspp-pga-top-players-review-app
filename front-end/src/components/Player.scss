@@ -3,7 +3,7 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    background-color: #b8b8b8;
+    background-color: #d8d8d8;
 
     &__container {
         display: flex;
@@ -17,7 +17,7 @@
     }
 
     &__info {
-        width: 240px;
+        width: 250px;
         color: #999;
         margin-top: 30px;
         min-height: 200px;
@@ -34,6 +34,16 @@
             object-fit: cover;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        &__player {
+            display: grid;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         }
     }
 
