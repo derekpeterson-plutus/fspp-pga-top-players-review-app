@@ -1,11 +1,14 @@
 .player {
     width: 100%;
     height: 100%;
+    margin: 0 auto;
+    align-items: center;
     justify-content: center;
 
     &__container {
         width: 100%;
         display: flex;
+        align-items: center;
         justify-content: center;
     }  
 
@@ -16,11 +19,11 @@
     &__info {
         width: 250px;
         color: #999;
-        margin-top: 20px;
+        margin-top: 70px;
         margin-left: 10px;
         border-radius: 8px;
         margin-right: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         background-color: white;
         box-shadow: 2px 1px 16px 5px rgba(0, 0, 0, 0.61);
         -moz-box-shadow: 2px 1px 16px 5px rgba(0, 0, 0, 0.61);
