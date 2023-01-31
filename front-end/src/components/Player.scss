@@ -1,14 +1,11 @@
 .player {
     width: 100%;
     height: 100%;
-    align-items: center;
     justify-content: center;
-    background-color: #d8d8d8;
 
     &__container {
+        width: 100%;
         display: flex;
-        text-align: center;
-        align-items: center;
         justify-content: center;
     }  
 
@@ -19,13 +16,15 @@
     &__info {
         width: 250px;
         color: #999;
-        margin-top: 30px;
-        min-height: 200px;
-        margin-left: auto;
+        margin-top: 20px;
+        margin-left: 10px;
         border-radius: 8px;
-        margin-right: auto;
-        margin-bottom: 30px;
+        margin-right: 10px;
+        margin-bottom: 20px;
         background-color: white;
+        box-shadow: 2px 1px 16px 5px rgba(0, 0, 0, 0.61);
+        -moz-box-shadow: 2px 1px 16px 5px rgba(0, 0, 0, 0.61);
+        -webkit-box-shadow: 2px 1px 16px 5px rgba(0, 0, 0, 0.61);
         
         img {
             width: 100%;
@@ -36,15 +35,4 @@
             border-top-right-radius: 8px;
         }
     }
-
-    @media only screen and (max-width: 768px) {
-        &__player {
-            display: grid;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        }
-    }
-
 }

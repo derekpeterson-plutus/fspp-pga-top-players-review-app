@@ -1,79 +1,89 @@
-.homePlayers {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #d8d8d8;
+// .homePlayers {
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: #d8d8d8;
     
-    &__container {
-        display: grid;
-        padding: 10px 10px;
-        text-align: center;
-        border-radius: 8px;
-        margin-top: 80px auto;
-        max-width: max-content;
-        justify-content: center;
-        grid-template-columns: repeat(3, 1fr);
-    }  
+//     &__container {
+//         display: grid;
+//         padding: 10px 10px;
+//         text-align: center;
+//         border-radius: 8px;
+//         margin-top: 80px auto;
+//         max-width: max-content;
+//         justify-content: center;
+//         grid-template-columns: repeat(3, 1fr);
+//     }  
       
-    &__details {
-        width: 250px;
-        margin: 30px;
-        display: flex;
-        margin-top: 70px;
-        min-height: 185px;
-        padding: 10px 20px;
-        align-items: center;
-        border-radius: 10px;
-        flex-direction: column;
-        background-color: #FFF;
-        justify-content: space-between;
+//     &__details {
+//         width: 250px;
+//         margin: 30px;
+//         display: flex;
+//         margin-top: 70px;
+//         min-height: 185px;
+//         padding: 3px 3px;
+//         align-items: center;
+//         border-radius: 5px;
+//         flex-direction: column;
+//         background-color: #FFF;
+//         justify-content: space-between;
         
-        img {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-    }
+//         img {
+//             width: 100%;
+//             height: 300px;
+//             margin: 0 auto;
+//             object-fit: cover;
+//             border-radius: 5px;
+//         }
+//     }
     
-    &__toggleDetails {
-        display: block;
-        cursor: pointer;
-        font-size: 15px;
-        font-weight: 300;
-        color: #777777;
-        margin-top: 1em;
+//     // &__toggleDetails {
+//     //     display: block;
+//     //     cursor: pointer;
+//     //     font-size: 15px;
+//     //     font-weight: 300;
+//     //     color: #777777;
+//     //     margin-top: 1em;
     
-        &:hover {
-            color: black;
-        }
-    }
+//     //     &:hover {
+//     //         color: black;
+//     //     }
+//     // }
     
-    @media only screen and (max-width: 768px) {
-        &__container {
-            display: grid;
-            row-gap: 10px;
-            margin-top: 70px;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-    }
+//     @media only screen and (max-width: 768px) {
+//         &__container {
+//             display: grid;
+//             row-gap: 10px;
+//             margin-top: 70px;
+//             text-align: center;
+//             align-items: center;
+//             justify-content: center;
+//             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//         }
+//     }
 
-    @media only screen and (max-width: 400px) {
-        &__container {
-            display: grid;
-            row-gap: 10px;
-            margin-top: 70px;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        }
-    }
+//     @media only screen and (max-width: 400px) {
+//         &__container {
+//             display: grid;
+//             row-gap: 10px;
+//             margin-top: 70px;
+//             text-align: center;
+//             align-items: center;
+//             justify-content: center;
+//             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//         }
+//     }
 
+// }
+
+.home {
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #d8d8d8;
+
+    &__left {
+        
+    }
 }

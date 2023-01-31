@@ -2,7 +2,9 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    max-width: 1280px;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 @media only screen and (max-width: 768px) {
@@ -11,7 +13,7 @@
         text-align: center;
         align-items: center;
         justify-content: center;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
 
