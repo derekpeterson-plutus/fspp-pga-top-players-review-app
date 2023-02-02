@@ -1,8 +1,8 @@
-import './Player.scss';
 import React from 'react';
+import './PlayerCard.scss';
 import { Link } from 'react-router-dom';
 
-const Player = ({ player }) => {
+const PlayerCard = ({ player }) => {
   return (
     <div className='player'>
       <div className='player__container'>
@@ -23,4 +23,4 @@ const Player = ({ player }) => {
   );
 };
 
-export default Player;
+export default PlayerCard;

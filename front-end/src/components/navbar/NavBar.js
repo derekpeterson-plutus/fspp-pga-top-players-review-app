@@ -1,16 +1,16 @@
 import './Navbar.scss';
-import Login from './Login';
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { VscSearch } from 'react-icons/vsc';
+//import Login from '../login/Login';
 import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
 
 
-const NavBar = () => {
+const NavBar = ({showModal, setShowModal}) => {
 
   const [nav, setNav] = useState(false);
-  const [showLoginModal, setShowLoginModal] = useState(false);
+  //const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSearchForm, setShowSearchForm] = useState(false);
 
   const links = [
@@ -49,7 +49,7 @@ const NavBar = () => {
   };
 
   const toggleLoginModal = () => {
-    setShowLoginModal((showLoginModal) => setShowLoginModal(!showLoginModal));
+    setShowModal(!showModal);
   };
 
   return (
@@ -96,24 +96,22 @@ const NavBar = () => {
             <Link to='/tours'>Tours</Link>
           </div> */}
           <div className='navbar__right-login' onClick={toggleLoginModal}>
-            {!showLoginModal ? (
-              <Link to='/login'>
+            {/* {!showLoginModal && (
+              <div>
                 <Login />
-              </Link>
-            ) : (
-              'Login'
-            )}
+              </div>
+            )} */}
+            Log In
           </div>
           <div
-            onClick={toggleSearchForm}
             className={
               showSearchForm
                 ? 'navbar__right-search navbar__right-search-active'
                 : 'navbar__right-search'
             }
           >
-            <FaSearch size={13} title='Search' />
-            {showSearchForm ? (
+            <FaSearch size={13} title='Search' onClick={toggleSearchForm}/>
+            {showSearchForm && (
               <div>
                 <form className='navbar__right-search_form'>
                   <input
@@ -126,8 +124,6 @@ const NavBar = () => {
                   </button>
                 </form>
               </div>
-            ) : (
-              <></>
             )}
           </div>
         </div>

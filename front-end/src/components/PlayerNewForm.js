@@ -1,4 +1,5 @@
 import axios from 'axios';
+import './PlayerNewForm.scss';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -39,7 +40,7 @@ const PlayerNewForm = () => {
   };
 
   return (
-    <section className='new__form'>
+    <section className='newForm'>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor='name'>Player's Name:</label>

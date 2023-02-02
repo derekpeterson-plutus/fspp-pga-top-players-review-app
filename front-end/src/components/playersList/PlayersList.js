@@ -1,11 +1,11 @@
-import './Players.scss';
 import axios from 'axios';
-import Player from './Player';
+import './PlayersList.scss';
+import PlayerCard from '../playerCard/PlayerCard';
 import React, { useState, useEffect } from 'react';
 
 const API = process.env.REACT_APP_API_URL;
 
-const Players = () => {
+const PlayersList = () => {
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
@@ -21,11 +21,11 @@ const Players = () => {
     <div>
       <div className='players'>
         {players.map((player, index) => {
-          return <Player key={index} player={player} />;
+          return <PlayerCard key={index} player={player} />;
         })}
       </div>
     </div>
   );
 };
 
-export default Players;
+export default PlayersList;

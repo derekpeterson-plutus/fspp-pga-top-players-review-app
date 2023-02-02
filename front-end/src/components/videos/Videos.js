@@ -1,8 +1,11 @@
 import React from 'react';
+import Video from './Video.scss';
 
 const Videos = () => {
   return (
-    <div>Videos</div>
+    <div>
+      <div>List of Videos</div>
+    </div>
   )
 };
 

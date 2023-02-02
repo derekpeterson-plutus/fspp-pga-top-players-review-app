@@ -78,23 +78,23 @@ const Home = () => {
           alt='heroImg' 
           className='home__heroImg' 
           src="https://www.golfchannel.com/sites/default/files/2023/01/28/homa_1920_farmers23_D4_trophy.jpg"/>
-        <span className='home__leftInfo'>Hope springs Max Homa to new heights at Torrey Pines</span>
+        <span className='home__heroInfo'>Hope springs Max Homa to new heights at Torrey Pines</span>
       </div>
       <div className='home__right'>
-      <div className='home__rightTop'>
-        <img 
-          alt="rightImg" 
-          className='home__rightTopImg' 
-          src='https://sportshub.cbsistatic.com/i/r/2023/01/30/46e46950-c350-4b26-a39b-b2aae0022e26/thumbnail/770x433/1cbed752b9bb56282ae97b5ad737650c/rory-mcilroy-2023-dubai.jpg' />
-          <span className='home__rightTopInfo'>McIlroy wins Hero Dubai Desert Classic</span>
-      </div>
-      <div className='home__rightBottom'>
-        <img 
-          alt="rightImg" 
-          className='home__rightBottomImg' 
-          src='https://golf.com/wp-content/uploads/2023/01/GettyImages-1246186721.jpg?width=1568&height=882' />
-          <span className='home__rightBottomInfo'>Jordan Spieth enters LIV Golf joke chat</span>
-      </div>
+        <div className='home__rightTop'>
+          <img 
+            alt="rightImg" 
+            className='home__rightTopImg' 
+            src='https://sportshub.cbsistatic.com/i/r/2023/01/30/46e46950-c350-4b26-a39b-b2aae0022e26/thumbnail/770x433/1cbed752b9bb56282ae97b5ad737650c/rory-mcilroy-2023-dubai.jpg' />
+            <span className='home__rightTopInfo'>McIlroy wins Hero Dubai Desert Classic by one shot</span>
+        </div>
+        <div className='home__rightBottom'>
+          <img 
+            alt="rightImg" 
+            className='home__rightBottomImg' 
+            src='https://pga-tour-res.cloudinary.com/image/upload/c_fill,f_auto,g_center,h_478,q_auto,w_850/v1/pgatour/editorial/2023/01/30/spieth-pebble-pr-1694.jpg' />
+            <span className='home__rightBottomInfo'>Jordan Spieth's best shots at AT&T Pebble Beach</span>
+        </div>
       </div>
     </div>
   );
