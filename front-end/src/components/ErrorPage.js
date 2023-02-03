@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import errorpage from '../assets/errorpage.webp';
+import Error404 from '../assets/Error404.gif';
 
 const ErrorPage = () => {
   return (
     <div class='bg-indigo-900 relative overflow-hidden h-screen'>
       <img
         alt='error__page'
-        src={errorpage}
+        src={Error404}
         class='absolute h-full w-full object-cover'
       />
       <div class='inset-0 bg-black opacity-25 absolute'></div>

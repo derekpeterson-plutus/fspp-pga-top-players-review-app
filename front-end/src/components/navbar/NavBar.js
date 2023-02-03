@@ -10,38 +10,38 @@ import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
 const NavBar = ({showModal, setShowModal}) => {
 
   const [nav, setNav] = useState(false);
-  //const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSearchForm, setShowSearchForm] = useState(false);
+  //const [showLoginModal, setShowLoginModal] = useState(false);
 
   const links = [
+    // {
+    //   id: 1,
+    //   link: <Link to='/'>Home</Link>,
+    // },
     {
       id: 1,
-      link: <Link to='/'>Home</Link>,
-    },
-    {
-      id: 2,
       link: <Link to='/players'>Players</Link>,
     },
     {
-      id: 3,
+      id: 2,
       link: <Link to='/players/new'>More</Link>,
     },
     {
-      id: 4,
+      id: 3,
       link: <Link to='/videos'>Videos</Link>,
     },
     {
-      id: 5,
+      id: 4,
       link: <Link to='/watch'>Watch</Link>,
     },
-    // {
-    //   id: 6,
-    //   link: <Link to='/about'>About</Link>,
-    // },
-    // {
-    //   id: 7,
-    //   link: <Link to='/contact'>Contact</Link>,
-    // },
+    {
+      id: 5,
+      link: <Link to='/shop'>Shop</Link>,
+    },
+    {
+      id: 7,
+      link: <Link to='/game'>Game</Link>,
+    },
   ];
 
   const toggleSearchForm = () => {
@@ -96,11 +96,6 @@ const NavBar = ({showModal, setShowModal}) => {
             <Link to='/tours'>Tours</Link>
           </div> */}
           <div className='navbar__right-login' onClick={toggleLoginModal}>
-            {/* {!showLoginModal && (
-              <div>
-                <Login />
-              </div>
-            )} */}
             Log In
           </div>
           <div
