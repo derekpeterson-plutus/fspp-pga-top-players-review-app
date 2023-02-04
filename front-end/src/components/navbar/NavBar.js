@@ -1,23 +1,18 @@
 import './Navbar.scss';
-import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import logo from '../../assets/logo.png';
 import { VscSearch } from 'react-icons/vsc';
-//import Login from '../login/Login';
+//import SearchBar from '../searchBar/SearchBar';
 import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
 
 
 const NavBar = ({showModal, setShowModal}) => {
 
-  const [nav, setNav] = useState(false);
+  const [navbar, setNavbar] = useState(false);
   const [showSearchForm, setShowSearchForm] = useState(false);
-  //const [showLoginModal, setShowLoginModal] = useState(false);
 
   const links = [
-    // {
-    //   id: 1,
-    //   link: <Link to='/'>Home</Link>,
-    // },
     {
       id: 1,
       link: <Link to='/players'>Players</Link>,
@@ -60,19 +55,19 @@ const NavBar = ({showModal, setShowModal}) => {
             <Link to='/'><img alt='logo' src={logo}/></Link>
           </div>
           <div
-            onClick={() => setNav(!nav)}
+            onClick={() => setNavbar(!navbar)}
             className='cursor-pointer ml-2 pr-4 z-10 text-gray-300 md:hidden hover:text-white'
           >
-            {nav ? <FaTimes size={18} /> : <FaBars size={18} />}
+            {navbar ? <FaTimes size={18} /> : <FaBars size={18} />}
           </div>
-          {nav && (
-            <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-[#062146] text-[rgb(186,185,185)]'>
+          {navbar && (
+            <ul className='flex flex-col z-10 justify-center items-center absolute top-0 left-0 w-full h-screen bg-[#062146] text-[rgb(186,185,185)]'>
               {links.map(({ id, link }) => (
                 <li
                   key={id}
                   className='px-4 cursor-pointer uppercase py-6 text-2xl hover:text-white'
                 >
-                  <Link onClick={() => setNav(!nav)} to={link}>
+                  <Link onClick={() => setNavbar(!navbar)} to={link}>
                     {link}
                   </Link>
                 </li>
@@ -92,12 +87,7 @@ const NavBar = ({showModal, setShowModal}) => {
           ))}
         </ul>
         <div className='navbar__right'>
-          {/* <div className='navbar__right-tours'>
-            <Link to='/tours'>Tours</Link>
-          </div> */}
-          <div className='navbar__right-login' onClick={toggleLoginModal}>
-            Log In
-          </div>
+          <div className='navbar__right-login' onClick={toggleLoginModal}>Log In</div>
           <div
             className={
               showSearchForm
@@ -105,8 +95,8 @@ const NavBar = ({showModal, setShowModal}) => {
                 : 'navbar__right-search'
             }
           >
-            <FaSearch size={13} title='Search' onClick={toggleSearchForm}/>
-            {showSearchForm && (
+            <FaSearch size={18} title='Search' onClick={toggleSearchForm}/>
+            {showSearchForm && ( //<SearchBar />
               <div>
                 <form className='navbar__right-search_form'>
                   <input
@@ -118,7 +108,7 @@ const NavBar = ({showModal, setShowModal}) => {
                     <VscSearch />
                   </button>
                 </form>
-              </div>
+              </div> 
             )}
           </div>
         </div>

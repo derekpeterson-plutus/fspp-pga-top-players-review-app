@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 
 /******************** PAGES ********************/
 import New from './pages/New';
@@ -12,9 +12,9 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Modal from './components/modal/Modal';
 import Watch from './components/watch/Watch';
-import NavBar from './components/navbar/NavBar';
-import Videos from './components/videos/Videos';
 import ErrorPage from './components/ErrorPage';
+import Navbar from './components/navbar/Navbar';
+import Videos from './components/videos/Videos';
 
 /******************** ROUTERS ********************/
 import { Routes, Route } from 'react-router-dom';
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className='app'>
-      <NavBar showModal={showModal} setShowModal={setShowModal} />
+      <Navbar showModal={showModal} setShowModal={setShowModal} />
       <Modal showModal={showModal} setShowModal={setShowModal}/>
 
       <Routes>

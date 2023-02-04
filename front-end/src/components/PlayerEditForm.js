@@ -9,15 +9,15 @@ const PlayerEditForm = () => {
   let navigate = useNavigate();
   const [player, setPlayer] = useState({
     name: '',
-    rank_this_week: '',
-    rank_last_week: '',
-    country: '',
+    image: '',
     events: '',
+    country: '',
     avg_points: '',
+    is_favorite: '',
     total_points: '',
     money_earned: '',
-    is_favorite: '',
-    image: '',
+    rank_last_week: '',
+    rank_this_week: '',
   });
 
   const updatePlayer = (player) => {

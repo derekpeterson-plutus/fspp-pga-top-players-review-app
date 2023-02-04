@@ -1,10 +1,13 @@
+import './Videos.scss';
 import React from 'react';
-import Video from './Video.scss';
+import bgImg2 from '../../assets/bgImg2.jpeg';
 
 const Videos = () => {
   return (
-    <div>
-      <div>List of Videos</div>
+    <div className='videos'>
+      <div className='videos__container'>
+        <img alt="bgImg" src={bgImg2}/>
+      </div>
     </div>
   )
 };
