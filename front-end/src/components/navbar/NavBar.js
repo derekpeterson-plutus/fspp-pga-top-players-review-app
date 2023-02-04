@@ -56,7 +56,7 @@ const NavBar = ({showModal, setShowModal}) => {
           </div>
           <div
             onClick={() => setNavbar(!navbar)}
-            className='cursor-pointer ml-2 pr-4 z-10 text-gray-300 md:hidden hover:text-white'
+            className='cursor-pointer ml-2 pr-4 z-20 text-gray-300 md:hidden hover:text-white'
           >
             {navbar ? <FaTimes size={18} /> : <FaBars size={18} />}
           </div>

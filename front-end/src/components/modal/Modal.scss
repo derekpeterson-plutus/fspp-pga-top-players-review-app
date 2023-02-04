@@ -2,9 +2,10 @@
     top: 50%;
     left: 50%;
     float: left;
+    border: none;
     z-index: 10;
-    width: 432px;
-    height: 432px;
+    width: 480px;
+    height: 500px;
     margin: 0 auto;
     max-height: 80%;
     line-height: 35px;
@@ -17,7 +18,6 @@
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    border: 0.5px solid lightgray;
     transform: translate(-50%, -50%);
     box-shadow: 2px 1px 16px 5px rgba(0,0,0,0.61);
     -moz-box-shadow: 2px 1px 16px 5px rgba(0,0,0,0.61);
