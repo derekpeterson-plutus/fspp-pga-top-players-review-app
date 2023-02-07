@@ -8,7 +8,7 @@ CREATE DATABASE pga_players;
 \c pga_players; 
 
 
--- CREATING THE SNACKS TABLE
+-- CREATING THE PLAYERS TABLE
 CREATE TABLE players (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
@@ -19,7 +19,6 @@ CREATE TABLE players (
     avg_points DECIMAL NOT NULL,
     total_points DECIMAL NOT NULL,
     money_earned TEXT NOT NULL,
-    is_favorite BOOLEAN,
     image TEXT NOT NULL
 );
 

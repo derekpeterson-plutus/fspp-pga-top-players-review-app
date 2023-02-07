@@ -3,7 +3,7 @@
 
 DROP TABLE IF EXISTS players;
 
--- CREATING THE SNACKS TABLE
+-- CREATING THE PLAYERS TABLE
 CREATE TABLE players (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
@@ -14,6 +14,5 @@ CREATE TABLE players (
     avg_points DECIMAL,
     total_points DECIMAL,
     money_earned TEXT NOT NULL,
-    is_favorite BOOLEAN,
     image TEXT NOT NULL
 );
