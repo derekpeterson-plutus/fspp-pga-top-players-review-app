@@ -37,6 +37,10 @@ const NavBar = ({showModal, setShowModal}) => {
       id: 7,
       link: <Link to='/game'>Game</Link>,
     },
+    {
+      id: 8,
+      link: <Link to='/contact'>Contact</Link>,
+    },
   ];
 
   const toggleSearchForm = () => {

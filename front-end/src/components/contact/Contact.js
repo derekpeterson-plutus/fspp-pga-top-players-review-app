@@ -1,10 +1,11 @@
+import './Contact.scss';
 import React from 'react';
 
 const Contact = () => {
   return (
     <div
       name='contact'
-      className='h-screen w-full bg-[#d2d1d1] p-4 text-[#777777]'
+      className='h-screen w-full bg-[#DDDDDD] p-4 text-[#FFFFFF]'
     >
       <div className='flex flex-col p-4 justify-center align-middle max-w-screen-lg mt-4 h-full ml-auto mr-auto'>
         <div className='pb-8'>

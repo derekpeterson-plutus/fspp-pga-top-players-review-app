@@ -1,20 +1,21 @@
 .login {
     color: gray;
     display: flex;
-    font-size: 15px;
     padding: 30px;
+    font-size: 15px;
     padding-left: 68px;
     text-align: center;
     padding-right: 68px;
     align-items: center;
     flex-direction: column;
-    box-sizing: content-box;
+    box-sizing: border-box;
 
     form {
         width: 100%;
         display: flex;
         border-radius: 3px;
         align-items: center;
+        box-sizing: border-box;
         flex-direction: column;
         justify-content: center;
 
@@ -44,12 +45,13 @@
         align-items: center;
         justify-content: space-between;
     }
-
+    
     &__buttons {
         gap: 20px;
         width: 100%;
         display: flex;
         margin: 0 auto;
+        cursor: pointer;
         align-items: center;
         flex-direction: column;
         justify-content: center;
@@ -63,13 +65,6 @@
             border-radius: 2px;
             text-align: center;
             background-color: #1d87ff;
-        }
-    }
-
-    @media only screen and (max-width: 440px) {
-        .login {
-            width: 200px;
-            height: 200px;
         }
     }
 }

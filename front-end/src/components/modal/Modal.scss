@@ -1,11 +1,10 @@
 .modal {
     top: 50%;
     left: 50%;
-    float: left;
-    border: none;
     z-index: 10;
+    border: none;
     width: 480px;
-    height: 500px;
+    height: 480px;
     margin: 0 auto;
     max-height: 80%;
     line-height: 35px;
@@ -37,5 +36,12 @@
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         justify-content: space-between;
+    }
+
+    @media only screen and (max-width: 440px) {
+        .modal {
+            width: 200px;
+            height: 200px;
+        }
     }
 }

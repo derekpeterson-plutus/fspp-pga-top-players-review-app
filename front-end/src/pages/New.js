@@ -1,5 +1,5 @@
 import React from 'react';
-import PlayerNewForm from '../components/PlayerNewForm';
+import PlayerNewForm from '../components/playerNewForm/PlayerNewForm';
 
 const New = () => {
   return (

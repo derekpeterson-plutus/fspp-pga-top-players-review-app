@@ -9,12 +9,12 @@ import Home from './pages/home/Home';
 
 /******************** COMPONENTS ********************/
 import About from './components/About';
-import Contact from './components/Contact';
 import Modal from './components/modal/Modal';
 import Watch from './components/watch/Watch';
 import ErrorPage from './components/ErrorPage';
 import Navbar from './components/navbar/Navbar';
 import Videos from './components/videos/Videos';
+import Contact from './components/contact/Contact';
 
 /******************** ROUTERS ********************/
 import { Routes, Route } from 'react-router-dom';
