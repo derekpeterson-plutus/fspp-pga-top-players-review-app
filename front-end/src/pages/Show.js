@@ -1,5 +1,5 @@
 import React from 'react';
-import PlayerDetail from '../components/PlayerDetail';
+import PlayerDetail from '../components/playerDetail/PlayerDetail';
 
 const Show = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import PlayerEditForm from '../components/PlayerEditForm';
+import PlayerEditForm from '../components/playerEditForm/PlayerEditForm';
 
 const Edit = () => {
   return (

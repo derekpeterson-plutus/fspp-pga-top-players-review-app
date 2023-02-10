@@ -9,7 +9,7 @@ const API = process.env.REACT_APP_API_URL;
 const PlayerNewForm = () => {
   const navigate = useNavigate();
 
-  const [file, setFile] = useState('');
+  //const [file, setFile] = useState('');
 
   const [player, setPlayer] = useState({
     name: '',
@@ -17,7 +17,6 @@ const PlayerNewForm = () => {
     events: '',
     country: '',
     avg_points: '',
-    is_favorite: '',
     money_earned: '',
     total_points: '',
     rank_last_week: '',
@@ -39,33 +38,37 @@ const PlayerNewForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(addNewPlayer(player));
     addNewPlayer(player);
   };
 
   return (
     <div className='new'>
-      <section className='new__container'>
-        <form>
+      <div className='new__container'>
+        <form onSubmit={handleSubmit}>
           <div className='new__left'>
-            <img
-              alt='newImg'
-              src={
-                file
-                  ? URL.createObjectURL(file)
-                  : 'https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg'
-              }
-            />
             <div className='new__upload'>
-              <label htmlFor='file'>Upload Image: <MdDriveFolderUpload className='icon' /></label>
-              <input
-                id='file'
-                type='file'
-                style={{ display: 'none' }}
-                onChange={(e) => setFile(e.target.files[0])}
+              <img
+                alt='newImg'
+                className='new__leftImg'
+                src='https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg'
+                // src={
+                //   file
+                //     ? URL.createObjectURL(file)
+                //     : 'https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg'
+                // }
               />
+              <input
+                id='image'
+                type='text'
+                value={player.image}
+                style={{ "display": 'none' }}
+                onChange={handleTextChange}
+              />
+              <label htmlFor='image' className='cursor-pointer'><MdDriveFolderUpload size={30} title='Upload Image' /></label>
             </div>
           </div>
-          <div>
+          <div className='new__middle'>
             <div>
               <label htmlFor='name'>Player's Name:</label>
               <input
@@ -96,8 +99,18 @@ const PlayerNewForm = () => {
                 onChange={handleTextChange}
               ></input>
             </div>
+            <div>
+              <label htmlFor='avg_points'>Avg Points:</label>
+              <input
+                required
+                type='number'
+                id='avg_points'
+                value={player.avg_points}
+                onChange={handleTextChange}
+              ></input>
+            </div>
           </div>
-          <div>
+          <div className='new__right'>
             <div>
               <label htmlFor='rank'>Rank This Week:</label>
               <input
@@ -119,18 +132,6 @@ const PlayerNewForm = () => {
               ></input>
             </div>
             <div>
-              <label htmlFor='avg_points'>Avg Points:</label>
-              <input
-                required
-                type='number'
-                id='avg_points'
-                value={player.avg_points}
-                onChange={handleTextChange}
-              ></input>
-            </div>
-          </div>
-          <div>
-            <div>
               <label htmlFor='total_points'>Total Points:</label>
               <input
                 required
@@ -150,23 +151,13 @@ const PlayerNewForm = () => {
                 onChange={handleTextChange}
               ></input>
             </div>
-            <div>
-              <label htmlFor='is_favorite'>Is Favorite:</label>
-              <input
-                required
-                type='text'
-                id='is_favorite'
-                value={player.is_favorite}
-                onChange={handleTextChange}
-              ></input>
-            </div>
+          </div>
+          <div className='new__buttons'>
+            <input type='submit' className='border-none cursor-pointer bg-[#1d87ff] text-white'/>
+            <button className='cursor-pointer rounded-[4px] bg-[#1d87ff] py-[10px] text-white w-full'><Link to='/players'>Go Back</Link></button>
           </div>
         </form>
-        <div className='new__buttons'>
-          <button onClick={handleSubmit}>Submit</button>
-          <button><Link to='/players'>Back</Link></button>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };

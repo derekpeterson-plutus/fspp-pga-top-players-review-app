@@ -3,6 +3,7 @@ import './PlayerCard.scss';
 import { Link } from 'react-router-dom';
 
 const PlayerCard = ({ player }) => {
+
   return (
     <div className='player'>
       <div className='player__container'>

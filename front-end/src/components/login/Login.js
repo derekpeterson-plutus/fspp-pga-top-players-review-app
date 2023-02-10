@@ -14,7 +14,7 @@ const Login = () => {
       <div className='login__reminder'>
         <div className='flex justify-center gap-1'>
           <input type='checkbox' name='reminder' id='reminder' className='cursor-pointer' />
-          <label for='reminder'>Remember me</label>
+          <label htmlFor='reminder'>Remember me</label>
         </div>
         <button>Forgot password?</button>
       </div>

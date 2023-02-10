@@ -1,4 +1,5 @@
 import axios from 'axios';
+import './PlayerEditForm.scss';
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
@@ -45,7 +46,7 @@ const PlayerEditForm = () => {
 
   return (
     <div className='edit__form'>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor='name'>Player Name:</label>
           <input
@@ -134,17 +135,6 @@ const PlayerEditForm = () => {
             required
           ></input>
         </div>
-        <div>
-          <label htmlFor='avg_points'>Is Favorite:</label>
-          <input
-            id='is_favorite'
-            type='boolean'
-            value={player.is_favorite}
-            onChange={handleTextChange}
-            className='my-4 p-2 bg-transparent border-2 rounded-md text-black focus:outline-none'
-            required
-          ></input>
-        </div>
         <button
           onClick={handleSubmit}
           className='text-white max-w-[300px] bg-[#1D87FF] px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'
@@ -153,7 +143,7 @@ const PlayerEditForm = () => {
       <Link to='/players'>
         <button className='text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>
           {' '}
-          Go Back{' '}
+          Back{' '}
         </button>
       </Link>
     </div>

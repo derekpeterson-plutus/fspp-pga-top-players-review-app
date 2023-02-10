@@ -1,4 +1,5 @@
 import axios from 'axios';
+import './PlayerDetail.scss';
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
@@ -47,7 +48,6 @@ const PlayerDetail = () => {
       <p>Money Earned: {player.money_earned}</p>
       <p>Rank This Week: {player.rank_this_week}</p>
       <p>Rank Last Week: {player.rank_last_week}</p>
-      <p>Is Favorite: {player.is_favorite ? '❤️' : '👎'}</p>
       <div>
         <Link to='/players'>
           <button className='text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>

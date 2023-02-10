@@ -5,6 +5,11 @@
     align-items: center;
     justify-content: center;
 
+    &:hover {
+        transform: scale(1.2);
+        transition: all 0.8s ease-out;
+    }
+
     &__container {
         width: 100%;
         display: flex;
