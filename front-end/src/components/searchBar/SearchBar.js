@@ -17,8 +17,10 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
       <form className='searchBar__form'>
         <input
           type='text'
+          value={searchTerm}
           placeholder='Search...'
           className='searchBar__input'
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button type='submit'>
           <VscSearch />

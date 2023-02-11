@@ -8,7 +8,7 @@ import Index from './pages/Index';
 import Home from './pages/home/Home';
 
 /******************** COMPONENTS ********************/
-import About from './components/About';
+import About from './components/about/About';
 import Modal from './components/modal/Modal';
 import Watch from './components/watch/Watch';
 import ErrorPage from './components/ErrorPage';
