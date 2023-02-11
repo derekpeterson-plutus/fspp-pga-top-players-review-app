@@ -30,13 +30,13 @@
     
     &__icon {
         color: white;
-        padding: 0.7em;
+        padding: 0.6em;
         border-radius: 50%;
         align-items: center;
         justify-content: center;
         background-color: #006ba6;
-        width: calc((25px) + (2 * 0.7em));
-        height: calc((25px) + (2 * 0.7em));
+        width: calc((25px) + (2 * 0.6em));
+        height: calc((25px) + (2 * 0.6em));
 
         &:hover {
             background-color: #F7B137;
@@ -60,5 +60,28 @@
         margin-top: 60px;
         align-items: center;
         justify-content: center;
+    }
+
+    @media only screen and (max-width: 400px) {
+
+        &__links {
+            font-size: 16px;
+        }
+
+        &__icons {
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        &__icon {
+            padding: 0.6em;
+            width: calc((25px) + (2 * 0.6em));
+            height: calc((25px) + (2 * 0.6em));
+        }
+
+        &__copyright {
+            font-size: 15px;
+        }
     }
 }

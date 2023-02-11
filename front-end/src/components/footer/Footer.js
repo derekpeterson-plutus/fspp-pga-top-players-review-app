@@ -30,9 +30,9 @@ const Footer = () => {
             <div className='footer__icon' title='Twitter'>
                 <a href='https://www.twitter.com/plutusmercurius' target='_blank' rel='noopener noreferrer'><BsTwitter size={25} /></a>
             </div>
-            <div className='footer__icon' title='Email'>
+            {/* <div className='footer__icon' title='Email'>
                 <a href='https://www.gmail.com/' target='_blank' rel='noopener noreferrer'><FaEnvelope size={25} /></a>
-            </div> 
+            </div>  */}
             <div className='footer__icon' title='Instagram'>
                 <a href='https://www.instagram.com/pgatour/' target='_blank' rel='noopener noreferrer'><BsInstagram size={25} /></a>
             </div>
