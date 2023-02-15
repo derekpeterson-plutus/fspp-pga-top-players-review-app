@@ -80,24 +80,28 @@
 
     @media only screen and (max-width: 400px) {
         .home {
-           
+           display: flex;
+           flex-direction: column;
         }
         
         &__left, &__right {
-            width: 50%;
+            display: flex;
+            flex-direction: column;
         }
         
         &__heroImg, &__rightTopImg, &__rightBottomImg {
-            width: 50%;
             max-width: 50%;
             margin: 0 auto;
             min-width: 50%;
+            display: flex;
+            flex-direction: column;
         }
     }
 
     @media only screen and (max-width: 900px) {
         .home {
-           
+            display: flex;
+            flex-direction: column;
         }
     }
 }

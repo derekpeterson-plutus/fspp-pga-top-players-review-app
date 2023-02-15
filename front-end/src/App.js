@@ -1,4 +1,8 @@
+/******************** DEPENDENCY ********************/
 import React, { useState } from 'react';
+
+/******************** ROUTERS ********************/
+import { Routes, Route } from 'react-router-dom';
 
 /******************** PAGES ********************/
 import New from './pages/New';
@@ -17,11 +21,7 @@ import Videos from './components/videos/Videos';
 import Footer from './components/footer/Footer';
 import Contact from './components/contact/Contact';
 
-/******************** ROUTERS ********************/
-import { Routes, Route } from 'react-router-dom';
-
 function App() {
-
   //const [isLoading, setIsLoading] = useState(true);
   //const [hasError, setHasError] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -31,18 +31,18 @@ function App() {
       <Navbar showModal={showModal} setShowModal={setShowModal}/>
       <Modal showModal={showModal} setShowModal={setShowModal}/>
 
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/*' element={<ErrorPage />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/watch' element={<Watch />} />
-        <Route path='/players' element={<Index />} />
-        <Route path='/videos' element={<Videos />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/players/new' element={<New />} />
-        <Route path='/players/:id' element={<Show />} />
-        <Route path='/players/:id/edit' element={<Edit />} />
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/*' element={<ErrorPage />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/watch' element={<Watch />} />
+          <Route path='/players' element={<Index />} />
+          <Route path='/videos' element={<Videos />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/players/new' element={<New />} />
+          <Route path='/players/:id' element={<Show />} />
+          <Route path='/players/:id/edit' element={<Edit />} />
+        </Routes>
       
       <Footer />
     </div>

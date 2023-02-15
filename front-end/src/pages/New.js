@@ -1,10 +1,10 @@
 import React from 'react';
-import PlayerNewForm from '../components/playerNewForm/PlayerNewForm';
+import PlayerForm from '../components/playerForm/PlayerForm';
 
 const New = () => {
   return (
     <div>
-      <PlayerNewForm />
+      <PlayerForm />
     </div>
   );
 };

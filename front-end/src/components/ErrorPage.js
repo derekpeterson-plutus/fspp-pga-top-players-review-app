@@ -14,7 +14,7 @@ const ErrorPage = () => {
       <div class='container mx-auto px-6 md:px-12 relative z-10 flex items-center py-32 xl:py-40'>
         <div class='w-full font-mono flex flex-col items-center relative z-10'>
           <p class='font-extrabold text-8xl my-44 text-white animate-bounce'>
-            <Link to='/'>Back Home</Link>
+            <Link to='/'>Golf Home</Link>
           </p>
         </div>
       </div>
