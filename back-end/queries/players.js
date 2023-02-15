@@ -4,10 +4,8 @@ const db = require('../db/dbConfig');
 const getAllPlayers = async () => {
   try {
     const allPlayers = await db.any('SELECT * FROM players');
-    //console.log('Get all players here:', allPlayers);
     return allPlayers;
   } catch (error) {
-    //console.log('Error message here:', error);
     return error.message;
   }
 };
@@ -37,7 +35,6 @@ const createNewPlayer = async (player) => {
         player.avg_points,
         player.total_points,
         player.money_earned,
-        //player.is_favorite,
         player.image,
       ]
     );
@@ -51,7 +48,7 @@ const createNewPlayer = async (player) => {
 const updatePlayer = async (id, player) => {
   try {
     const updatedPlayer = await db.one(
-      'UPDATE players SET name=$1, rank_this_week=$2, rank_last_week=$3, country=$4, events=$5, avg_points=$6, total_points=$7, money_earned=$8, is_favorite=$9, image=$10 WHERE id=$11 RETURNING *',
+      'UPDATE players SET name=$1, rank_this_week=$2, rank_last_week=$3, country=$4, events=$5, avg_points=$6, total_points=$7, money_earned=$8, image=$9 WHERE id=$10 RETURNING *',
       [
         player.name,
         player.rank_this_week,
@@ -61,7 +58,6 @@ const updatePlayer = async (id, player) => {
         player.avg_points,
         player.total_points,
         player.money_earned,
-        player.is_favorite,
         player.image,
         id,
       ]

@@ -43,16 +43,10 @@ players.get('/:id', async (req, res) => {
 });
 
 //ADD ONE PLAYER
-players.post(
-  '/',
-  //checkValues,
-  //checkBoolean,
-  //changeImageUrl,
-  async (req, res) => {
+players.post('/', async (req, res) => {
     const newPlayer = req.body;
     console.log(newPlayer)
     const createdPlayer = await createNewPlayer(newPlayer);
-
     if (createdPlayer) {
       res.status(200).json({ success: true, payload: createdPlayer });
     } else {
@@ -65,12 +59,7 @@ players.post(
 );
 
 //UPDATE ONE PLAYER WITH PUT METHOD
-players.put(
-  '/:id',
-  //checkValues,
-  //checkBoolean,
-  //changeImageUrl,
-  async (req, res) => {
+players.put('/:id', async (req, res) => {
     const { id } = req.params;
     const { body } = req;
 
