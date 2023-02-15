@@ -1,15 +1,12 @@
 import axios from 'axios';
 import './PlayerForm.scss';
 import React, { useState } from 'react';
-//import { MdDriveFolderUpload } from 'react-icons/md';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const API = process.env.REACT_APP_API_URL;
 
 const PlayerForm = () => {
   const navigate = useNavigate();
-
-  //const [file, setFile] = useState('');
 
   const [player, setPlayer] = useState({
     name: '',
@@ -38,7 +35,6 @@ const PlayerForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(addNewPlayer(player));
     addNewPlayer(player);
   };
 

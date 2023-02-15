@@ -28,18 +28,16 @@ const PlayerDetail = () => {
   };
 
   return (
-    <div className='player__detail'>
-      <div className='player__img'>
+    <div className='playerDetail'>
+      <div className='playerDetail__title'>Player's Statistic</div>
+      <div className='playerDetail__image'>
         <img
-          className='rounded-lg w-1/2'
-          src={player.image}
           alt={player.name}
+          src={player.image}
+          className='rounded-lg w-1/2'
         />
       </div>
 
-      <div>
-        <h4>Player's Statistic</h4>
-      </div>
       <p>Name: {player.name}</p>
       <p>Country: {player.country}</p>
       <p>Events Played: {player.events}</p>
