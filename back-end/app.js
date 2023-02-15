@@ -1,7 +1,7 @@
 //DEPENDENCIES
 const cors = require('cors');
 const express = require('express');
-
+const bodyParser = require('body-parser');
 const playerController = require('./controllers/playerController');
 
 //CONFIGURATION
@@ -10,7 +10,9 @@ const app = express();
 //MIDDLEWARE
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.json());
 app.use('/players', playerController);
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //ROUTES
 app.get('/', (req, res) => {

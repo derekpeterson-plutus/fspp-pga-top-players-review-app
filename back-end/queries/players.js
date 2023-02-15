@@ -24,9 +24,10 @@ const getOnePlayer = async (id) => {
 
 //CREATE A NEW PLAYER
 const createNewPlayer = async (player) => {
+  console.log(player)
   try {
     const newPlayer = await db.one(
-      'INSERT INTO players (name, rank_this_week, rank_last_week, country, events, avg_points, total_points, money_earned, is_favorite, image) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *',
+      'INSERT INTO players (name, rank_this_week, rank_last_week, country, events, avg_points, total_points, money_earned, image) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *',
       [
         player.name,
         player.rank_this_week,
@@ -36,7 +37,7 @@ const createNewPlayer = async (player) => {
         player.avg_points,
         player.total_points,
         player.money_earned,
-        player.is_favorite,
+        //player.is_favorite,
         player.image,
       ]
     );

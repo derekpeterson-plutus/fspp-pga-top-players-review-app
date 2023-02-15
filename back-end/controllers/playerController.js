@@ -3,17 +3,17 @@ const express = require('express');
 const players = express.Router();
 
 const {
-  changeImageUrl,
-  checkBoolean,
   checkValues,
+  checkBoolean,
+  changeImageUrl,
 } = require('../validation/checkPlayers');
 
 const {
-  getAllPlayers,
   getOnePlayer,
-  createNewPlayer,
   updatePlayer,
   deletePlayer,
+  getAllPlayers,
+  createNewPlayer,
 } = require('../queries/players');
 
 //SHOW ALL PLAYERS
@@ -45,11 +45,12 @@ players.get('/:id', async (req, res) => {
 //ADD ONE PLAYER
 players.post(
   '/',
-  changeImageUrl,
-  checkBoolean,
-  checkValues,
+  //checkValues,
+  //checkBoolean,
+  //changeImageUrl,
   async (req, res) => {
     const newPlayer = req.body;
+    console.log(newPlayer)
     const createdPlayer = await createNewPlayer(newPlayer);
 
     if (createdPlayer) {
@@ -66,9 +67,9 @@ players.post(
 //UPDATE ONE PLAYER WITH PUT METHOD
 players.put(
   '/:id',
-  changeImageUrl,
-  checkBoolean,
-  checkValues,
+  //checkValues,
+  //checkBoolean,
+  //changeImageUrl,
   async (req, res) => {
     const { id } = req.params;
     const { body } = req;
