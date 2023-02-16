@@ -3,6 +3,7 @@
     margin: 50px auto;
 
     &__title {
+        color: #888;
         font-size: 2em;
         font-weight: 600;
         margin-bottom: 10px;
@@ -16,6 +17,10 @@
 
     &__middle, &__right {
         width: 50%;
+    }
+
+    &__button {
+        font-size: 20px;
     }
 
     form {
@@ -40,11 +45,10 @@
 @media only screen and (max-width: 440px) {
 
     .playerForm {
-        margin: 0 auto;
         max-width: 400px;
+        margin: 20px auto;
         align-items: center;
         justify-content: center;   
-
 
         &__columns {
             display: flex;
@@ -54,13 +58,44 @@
         }
     
         &__upload {
-            width: 200px;
+            max-width: 200px;
             margin: 0 auto;
         }
     
         &__button {
-            width: 200px;
+            max-width: 200px;
+            margin: 20px auto;
+        }
+    
+        &__title {
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .playerForm {
+        width: 600px;
+        margin: 20px auto;
+        align-items: center;
+        justify-content: center;   
+
+        &__columns {
+            display: flex;
+            align-items: center;
+            flex-direction: column; 
+            justify-content: center; 
+        }
+    
+        &__upload {
+            width: 300px;
             margin: 0 auto;
+        }
+    
+        &__button {
+            width: 300px;
+            margin: 20px auto;
         }
     
         &__title {

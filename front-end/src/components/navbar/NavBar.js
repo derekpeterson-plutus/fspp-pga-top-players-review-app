@@ -19,7 +19,7 @@ const NavBar = ({showModal, setShowModal}) => {
     },
     {
       id: 2,
-      link: <Link to='/players/new'>More</Link>,
+      link: <Link to='/players/new'>Add Player</Link>,
     },
     {
       id: 3,

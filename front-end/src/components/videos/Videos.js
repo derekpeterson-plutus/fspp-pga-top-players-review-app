@@ -7,9 +7,9 @@ import VideoPlayer from '../videoPlayer/VideoPlayer';
 const Videos = () => {
   return (
     <div className='videos'>
-      <div className='videos__background'>
+      {/* <div className='videos__background'>
         <img alt="bgImg" src={bgImg2}/>
-      </div>
+      </div> */}
 
       <div className='videos__container'>
         <VideoPlayer />

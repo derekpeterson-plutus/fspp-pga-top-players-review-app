@@ -1,0 +1,35 @@
+.playerDetail {
+    width: 1000px;
+    display: flex;
+    color: white;
+    margin: 50px auto;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #21487C;
+    
+    &__container {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__image {
+        width: 300px;
+        height: 300px;
+        margin-left: 10px;
+        object-fit: cover;
+        border-radius: 50%;
+        object-position: center;
+    }
+
+    &__title {
+        color: white;
+        font-size: 3em;
+        font-weight: 600;
+        margin: 30px auto;
+        justify-content: center;
+    }
+
+}

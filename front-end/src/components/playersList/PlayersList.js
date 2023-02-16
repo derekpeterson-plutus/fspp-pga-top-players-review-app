@@ -36,7 +36,7 @@ const PlayersList = () => {
   return (
     <div>
       <div className='players'>
-        {hasError && <h1>Oop, error found!</h1>}
+        {hasError && <div><h1 style={{margin: '0 auto'}}>Server stops running. Please check your server!</h1></div>}
         {players.map((player, index) => {
           return <PlayerCard key={index} player={player} />;
         })}
