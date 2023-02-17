@@ -90,10 +90,11 @@
     
     &__editButton {
         width: 150px;
-        color: black;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 600;
         padding: 8px 16px;
+        color: goldenrod;
+        margin-right: 40px;
         border-radius: 5px;
         text-align: center;
         margin-bottom: 20px;
@@ -109,9 +110,10 @@
 
     &__deleteButton {
         width: 150px;
-        color: black;
+        color: red;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 600;
+        margin-right: 40px;
         padding: 8px 16px;
         border-radius: 5px;
         text-align: center;

@@ -32,6 +32,7 @@
             &:focus {
                 margin: 5px 1px 3px 0px;
                 padding: 3px 0px 3px 3px;
+                background-color: #f5f5f5;
                 border: 1px solid #1d87ff;
                 box-shadow: 0 0 5px #1d87ff;
             }
@@ -65,6 +66,11 @@
             border-radius: 2px;
             text-align: center;
             background-color: #1d87ff;
+
+            &:hover {
+                border-radius: 60px;
+                transition: all 0.5s ease-out;
+            }
         }
     }
 }
