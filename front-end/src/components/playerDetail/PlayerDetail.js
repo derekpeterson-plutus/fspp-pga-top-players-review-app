@@ -29,38 +29,47 @@ const PlayerDetail = () => {
 
   return (
     <div className='playerDetail'>
-      <div className='playerDeail__container'>
-        <div className='playerDetail__title'>{player.name}</div>
-        <div className='playerDetail__left'>
-          <div className='playerDetail__imageContainer'>
-            <img
-              alt={player.name}
-              src={player.image}
-              className='playerDetail__image'
-            />
-          </div>
+      <div className='playerDetail__wrapper'>
+        <div className='playerDetail__imageContainer'>
+          <img
+            alt={player.name}
+            src={player.image}
+            className='playerDetail__image'
+          />
         </div>
         <div className='playerDetail__info'>
-          <div><span>Country: {player.country}</span></div>
-          <div><span>Events Played: {player.events}</span></div>
-          <div><span>Avg Points: {player.avg_points}</span></div>
-          <div><span>Total Points: {player.total_points}</span></div>
-          <div><span>Money Earned: {player.money_earned}</span></div>
-          <div><span>Rank This Week: {player.rank_this_week}</span></div>
-          <div><span>Rank Last Week: {player.rank_last_week}</span></div>
+          <div className='playerDetail__title'>
+            <div>
+              {player.name}
+            </div>
+            <div className='playerDetail__country'>
+              <img alt={player.country} src={`/flags/${player.country}.svg`}/>
+              <p>{player.country}</p>
+            </div>
+          <div className='playerDetail__statistic'>
+            <div>World Ranking: <span title="Ranking">{player.rank_this_week}</span></div>
+            <div>Events Played: <span title='Events'>{player.events}</span></div>
+            <div>Average Points: <span title='Avg. Points'>{player.avg_points}</span></div>
+            <div>Total Points: <span title='Total Points'>{player.total_points}</span></div>
+            <div>Official Money: <span title='Official Money'>{player.money_earned}</span></div>
+          </div>
+          </div>
         </div>
-        <div className='playerDetail__buttons'>
-          <Link to={`/players/${id}/edit`}>
-            <button className='playerDetail__button'>
-              Edit
+        <div className='playerDetail__buttons'>  
+          <div className='playerDetail__editButton'>
+            <Link to={`/players/${id}/edit`}>
+              <button>
+                Edit
+              </button>
+            </Link>
+          </div>
+          <div className='playerDetail__deleteButton'>  
+            <button
+              onClick={handleDelete}
+            >
+              Delete
             </button>
-          </Link>
-          <button
-            onClick={handleDelete}
-            className='playerDetail__button'
-          >
-            Delete
-          </button>
+          </div>
         </div>
       </div>
     </div>
