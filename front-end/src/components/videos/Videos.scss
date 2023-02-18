@@ -7,35 +7,35 @@
     background-size: cover;
     background-repeat: none;
     background-position: center;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.7) 100%), url('https://golf.com/wp-content/uploads/2017/01/Pebble-6.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.8) 100%), url('http://images.squarespace-cdn.com/content/v1/5a8c9ed1d55b410cece9c9a0/1619651081843-4GLYMKP58ZAFL9O89F1Q/JFHenebry_20210111_CF023193PebbleBeach_18_SolsticeSunrise+2.jpg');
 
 
     animation-name: animate;
     animation-duration: 30s;
     animation-fill-mode: forwards;
     animation-play-state: running;
+    animation-timing-function: ease-in;
     animation-iteration-count: infinite;
-    animation-timing-function: step-end;
     animation-direction: alternate-reverse;
 
     @keyframes animate {
         0% {
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('https://www.pebblebeach.com/content/uploads/pbgl-7thhole-wave-bartkeagy-1.jpg');
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.8) 100%), url('http://images.squarespace-cdn.com/content/v1/5a8c9ed1d55b410cece9c9a0/1619651081843-4GLYMKP58ZAFL9O89F1Q/JFHenebry_20210111_CF023193PebbleBeach_18_SolsticeSunrise+2.jpg');
         }  
         20% {
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('https://media.california.com/media/_versions_jpg/articlecomponent/shutterstock_1846430251__1000x667____v1220x__.jpg');
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.8) 100%), url('https://media.california.com/media/_versions_jpg/articlecomponent/shutterstock_1846430251__1000x667____v1220x__.jpg');
         } 
         40% {
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('http://cdn.shopify.com/s/files/1/0510/4975/8916/products/8th-Hole_-Pebble-Beach-Golf-Links_DJI_0431_1200x1200.jpg?v=1639844975');
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.8) 100%), url('http://cdn.shopify.com/s/files/1/0510/4975/8916/products/8th-Hole_-Pebble-Beach-Golf-Links_DJI_0431_1200x1200.jpg?v=1639844975');
         }
         60% {
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('http://www.pebblebeach.com/content/uploads/8thPBGL_LR_%C2%A9PBGLEvanSc147B-1.jpg');
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.8) 100%), url('https://cdn.allsquaregolf.com/pictures/pictures/000/119/888/large/pebble_beach_golf_links_cover_picture.jpg');
         }
         80% {
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('https://images.squarespace-cdn.com/content/v1/55f9f598e4b051df9729fd3a/1628005524450-SDGN3RI4RWFJGQ9QEYCI/Pebble+Beach+Golf+Links.jpg');
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.8) 100%), url('https://images.squarespace-cdn.com/content/v1/55f9f598e4b051df9729fd3a/1628005524450-SDGN3RI4RWFJGQ9QEYCI/Pebble+Beach+Golf+Links.jpg');
         }
         100% {
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('https://www.golfholidays.com/images/1200-2683/pebble-beach-golf-links-features-among-the-premiere-golf-course-in-california.jpg');
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.8) 100%), url('https://www.golfholidays.com/images/1200-2683/pebble-beach-golf-links-features-among-the-premiere-golf-course-in-california.jpg');
         }
     }
 

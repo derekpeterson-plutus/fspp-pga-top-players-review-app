@@ -45,107 +45,108 @@ const PlayerEditForm = () => {
   };
 
   return (
-    <div className='edit__form'>
+    <div className='editForm'>
+      <div className='editForm__title'>Edit Player's Info</div>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor='name'>Player Name:</label>
-          <input
-            id='name'
-            value={player.name}
-            type='text'
-            onChange={handleTextChange}
-            className='my-4 p-2 bg-transparent border-2 rounded-md text-black focus:outline-none'
-            required
-          ></input>
+        <div className='editForm__columns'>
+          <div className='editForm__middle'>
+            <div>
+              <label htmlFor='name'>Player's Name:</label>
+              <input
+                id='name'
+                required
+                type='text'
+                value={player.name}
+                onChange={handleTextChange}
+              ></input>
+            </div>
+            <div>
+              <label htmlFor='country'>Country:</label>
+              <input
+                required
+                type='text'
+                id='country'
+                value={player.country}
+                onChange={handleTextChange}
+              ></input>
+            </div>
+            <div>
+              <label htmlFor='events'>Events:</label> 
+              <input
+                required
+                id='events'
+                type='number'
+                value={player.events}
+                onChange={handleTextChange}
+              ></input>
+            </div>
+            <div>
+              <label htmlFor='avg_points'>Avg Points:</label>
+              <input
+                required
+                type='number'
+                id='avg_points'
+                value={player.avg_points}
+                onChange={handleTextChange}
+              ></input>
+            </div>
+          </div>
+          <div className='editForm__right'>
+            <div>
+              <label htmlFor='rank'>Rank This Week:</label>
+              <input
+                required
+                type='number'
+                id='rank_this_week'
+                onChange={handleTextChange}
+                value={player.rank_this_week}
+              ></input>
+            </div>
+            <div>
+              <label htmlFor='rank'>Rank Last Week:</label>
+              <input
+                required
+                type='number'
+                id='rank_last_week'
+                onChange={handleTextChange}
+                value={player.rank_last_week}
+              ></input>
+            </div>
+            <div>
+              <label htmlFor='total_points'>Total Points:</label>
+              <input
+                required
+                type='number'
+                id='total_points'
+                value={player.total_points}
+                onChange={handleTextChange}
+              ></input>
+            </div>
+            <div>
+              <label htmlFor='money_earned'>Money Earned:</label>
+              <input
+                required
+                type='text'
+                id='money_earned'
+                value={player.money_earned}
+                onChange={handleTextChange}
+              ></input>
+            </div>
+          </div>
         </div>
-        <div>
+        <div className='editForm__upload'>
           <label htmlFor='image'>Image URL:</label>
           <input
             id='image'
             type='text'
             value={player.image}
             onChange={handleTextChange}
-            className='my-4 p-2 bg-transparent border-2 rounded-md text-black focus:outline-none'
-            required
-          ></input>
+          />
         </div>
-        <div>
-          <label htmlFor='country'>Country:</label>
-          <input
-            id='country'
-            type='text'
-            value={player.country}
-            onChange={handleTextChange}
-            className='my-4 p-2 bg-transparent border-2 rounded-md text-black focus:outline-none'
-            required
-          ></input>
+        <div className='editForm__button'>
+          <input type='submit' className='border-none cursor-pointer hover:shadow-xl bg-[#1d87ff] text-white'/>
         </div>
-        <div>
-          <label htmlFor='rank_this_week'>Rank This Week:</label>
-          <input
-            id='rank_this_week'
-            type='number'
-            value={player.rank_this_week}
-            onChange={handleTextChange}
-            className='my-4 p-2 bg-transparent border-2 rounded-md text-black focus:outline-none'
-            required
-          ></input>
-        </div>
-        <div>
-          <label htmlFor='rank_last_week'>Rank Last Week:</label>
-          <input
-            id='rank_last_week'
-            type='number'
-            value={player.rank_last_week}
-            onChange={handleTextChange}
-            className='my-4 p-2 bg-transparent border-2 rounded-md text-black focus:outline-none'
-            required
-          ></input>
-        </div>
-        <div>
-          <label htmlFor='protein'>Events:</label>
-          <input
-            id='events'
-            type='number'
-            value={player.events}
-            onChange={handleTextChange}
-            className='my-4 p-2 bg-transparent border-2 rounded-md text-black focus:outline-none'
-            required
-          ></input>
-        </div>
-        <div>
-          <label htmlFor='avg_points'>Average Points:</label>
-          <input
-            id='avg_points'
-            type='number'
-            value={player.avg_points}
-            onChange={handleTextChange}
-            className='my-4 p-2 bg-transparent border-2 rounded-md text-black focus:outline-none'
-            required
-          ></input>
-        </div>
-        <div>
-          <label htmlFor='total_points'>Total Points:</label>
-          <input
-            id='total_points'
-            type='number'
-            value={player.total_points}
-            onChange={handleTextChange}
-            className='my-4 p-2 bg-transparent border-2 rounded-md text-black focus:outline-none'
-            required
-          ></input>
-        </div>
-        <button
-          onClick={handleSubmit}
-          className='text-white max-w-[300px] bg-[#1D87FF] px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'
-        >Submit</button>
       </form>
-      <Link to='/players'>
-        <button className='text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>
-          {' '}
-          Back{' '}
-        </button>
-      </Link>
     </div>
   );
 };

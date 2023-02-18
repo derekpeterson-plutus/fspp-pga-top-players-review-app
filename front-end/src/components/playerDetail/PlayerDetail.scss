@@ -3,7 +3,7 @@
     display: flex;
     color: white;
     max-width: 1280px;
-    margin: 80px auto;
+    margin: 70px auto;
     border-radius: 10px;
     flex-direction: row;
     background-color: #21487C;
@@ -46,8 +46,8 @@
         display: flex;
         margin-left: 0;
         margin-top: auto;
-        position: absolute;
         object-fit: cover;
+        position: absolute;
         border-radius: 10px;
         margin-bottom: auto;
     }
@@ -79,7 +79,7 @@
     }
 
     &__buttons {
-        margin: 20px;
+        margin: 10px;
         display: flex;
         cursor: pointer;
         margin-right: 10px;
@@ -89,12 +89,11 @@
     }
     
     &__editButton {
-        width: 150px;
+        width: 200px;
         font-size: 18px;
         font-weight: 600;
         padding: 8px 16px;
         color: goldenrod;
-        margin-right: 40px;
         border-radius: 5px;
         text-align: center;
         margin-bottom: 20px;
@@ -109,11 +108,11 @@
     }
 
     &__deleteButton {
-        width: 150px;
+        width: 200px;
         color: red;
         font-size: 18px;
         font-weight: 600;
-        margin-right: 40px;
+        margin-right: 0px;
         padding: 8px 16px;
         border-radius: 5px;
         text-align: center;
@@ -126,4 +125,6 @@
             transition: all 0.5s ease-out;
         }
     }
+
+    
 }
