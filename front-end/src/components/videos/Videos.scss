@@ -1,41 +1,50 @@
 .videos {
-     max-width: 1280px;
-     margin: 50px auto;
-     align-items: center;
-     justify-content: center;
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-image: url(../../assets/bgImg2.jpeg) center no-repeat;
-    // background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0,rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    transition: 5s;
+    position: relative;
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.7) 100%), url('https://golf.com/wp-content/uploads/2017/01/Pebble-6.jpg');
 
-    &__background {
-        
-        //position: relative;
-        //background-size: cover;
-        //background-repeat: no-repeat;
-        //background: rgb(0, 0, 0, 0.4);
-        //background-image: url(../../assets/bgImg2.jpeg);
-        //background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0,rgba(0, 0, 0, 0) 60%, 
-        //rgba(0, 0, 0, 0.8) 100%);
 
-        // img {
-        //     width: 100%;
-        //     height: 100%;
-        //     position: fixed;
-        //     object-fit: cover;
-        //     position: relative;
-        //     background: rgb(0, 0, 0, 0.6);
-        //     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0,rgba(0, 0, 0, 0) 60%, 
-        //     rgba(0, 0, 0, 0.8) 100%);
-        // }
+    animation-name: animate;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+    animation-direction: alternate-reverse;
+
+    @keyframes animate {
+        0% {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('https://www.pebblebeach.com/content/uploads/pbgl-7thhole-wave-bartkeagy-1.jpg');
+        }  
+        20% {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('https://media.california.com/media/_versions_jpg/articlecomponent/shutterstock_1846430251__1000x667____v1220x__.jpg');
+        } 
+        40% {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('http://cdn.shopify.com/s/files/1/0510/4975/8916/products/8th-Hole_-Pebble-Beach-Golf-Links_DJI_0431_1200x1200.jpg?v=1639844975');
+        }
+        60% {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('http://www.pebblebeach.com/content/uploads/8thPBGL_LR_%C2%A9PBGLEvanSc147B-1.jpg');
+        }
+        80% {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('https://images.squarespace-cdn.com/content/v1/55f9f598e4b051df9729fd3a/1628005524450-SDGN3RI4RWFJGQ9QEYCI/Pebble+Beach+Golf+Links.jpg');
+        }
+        100% {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%), url('https://www.golfholidays.com/images/1200-2683/pebble-beach-golf-links-features-among-the-premiere-golf-course-in-california.jpg');
+        }
     }
 
-    &__container {
-        gap: 20px;
-        width: 100%;
-        display: grid;
-        margin: 0 auto;
-        border-radius: 1em;
-        grid-template-columns: repeat(4, 1fr);
-    }
+    // &__container {
+    //     gap: 20px;
+    //     width: 100%;
+    //     display: grid;
+    //     margin: 0 auto;
+    //     border-radius: 1em;
+    //     grid-template-columns: repeat(4, 1fr);
+    // }
 }
