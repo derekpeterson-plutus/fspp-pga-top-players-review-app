@@ -20,6 +20,7 @@ import Navbar from './components/navbar/Navbar';
 import Videos from './components/videos/Videos';
 import Footer from './components/footer/Footer';
 import Contact from './components/contact/Contact';
+import Privacy from './components/privacy/Privacy';
 
 function App() {
   //const [isLoading, setIsLoading] = useState(true);
@@ -38,6 +39,7 @@ function App() {
           <Route path='/watch' element={<Watch />} />
           <Route path='/players' element={<Index />} />
           <Route path='/videos' element={<Videos />} />
+          <Route path='/privacy' element={<Privacy/>} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/players/new' element={<New />} />
           <Route path='/players/:id' element={<Show />} />
