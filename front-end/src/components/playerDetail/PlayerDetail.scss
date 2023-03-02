@@ -89,39 +89,39 @@
     }
     
     &__editButton {
-        width: 200px;
+        width: 150px;
+        color: white;
         font-size: 18px;
-        font-weight: 600;
-        padding: 8px 16px;
-        color: goldenrod;
-        border-radius: 5px;
+        font-weight: 400;
+        padding: 10px 12px;
         text-align: center;
+        border-radius: 50px;
         margin-bottom: 20px;
-        background-color: rgb(228, 228, 123);
+        border: 0.5px solid white;
         
         &:hover {
             color: white;
             border-radius: 50px;
-            background-color: goldenrod;
+            border: 0.5px solid black;
             transition: all 0.5s ease-out;
         }
     }
 
     &__deleteButton {
-        width: 200px;
-        color: red;
+        width: 150px;
+        color: white;
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 400;
         margin-right: 0px;
-        padding: 8px 16px;
-        border-radius: 5px;
+        padding: 10px 12px;
         text-align: center;
-        background-color: rgb(244, 159, 159);
+        border-radius: 50px;
+        border: 0.5px solid white;
         
         &:hover {
             color: white;
             border-radius: 50px;
-            background-color: red;
+            border: 0.5px solid black;
             transition: all 0.5s ease-out;
         }
     }
