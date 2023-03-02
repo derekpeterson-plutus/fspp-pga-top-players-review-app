@@ -77,29 +77,29 @@
         background-color: rgba(0, 0, 0, 0.5);
     }
 
-    @media only screen and (max-width: 400px) {
-        .home {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
+    @media only screen and (max-width: 440px) {
+        
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
         &__rightTopInfo, &__rightBottomInfo, &__heroInfo {
             display: none;
         }
         
         &__heroImg, &__rightTopImg, &__rightBottomImg {
-            width: 300px;
+            width: 350px;
             height: 250px;
-            object-fit: cover;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            margin: 0 auto;
+            object-fit: contain;
         }
     }
 
     @media only screen and (max-width: 900px) {
-        .home {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        }
+  
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    
     }
 }
