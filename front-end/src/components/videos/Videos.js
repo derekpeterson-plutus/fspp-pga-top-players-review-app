@@ -7,31 +7,31 @@ const Videos = () => {
   return (
     <div className='videos'>
       <div className="videos__content">
-      <div className='videos__title'>Videos</div>
-      <div className='videos__container'>
-        <VideoPlayer />
-        <VideoPlayer />
-        <VideoPlayer />
-        <VideoPlayer />
-        <VideoPlayer />
-        <VideoPlayer />
-        <VideoPlayer />
-        <VideoPlayer />
-        <VideoPlayer />
+        <div className='videos__title'>Videos</div>
+        <div className='videos__container'>
+          <VideoPlayer />
+          <VideoPlayer />
+          <VideoPlayer />
+          <VideoPlayer />
+          <VideoPlayer />
+          <VideoPlayer />
+          <VideoPlayer />
+          <VideoPlayer />
+          <VideoPlayer />
 
-        {/* <div>
-          <video src={video} width="750" height="500" controls></video>
+          {/* <div>
+            <video src={video} width="750" height="500" controls></video>
+          </div>
+          <div>
+            <video src={video} width="750" height="500" controls></video>
+          </div>
+          <div>
+            <video src={video} width="750" height="500" controls></video>
+          </div>
+          <div>
+            <video src={video} width="750" height="500" controls></video>
+          </div> */}
         </div>
-        <div>
-          <video src={video} width="750" height="500" controls></video>
-        </div>
-        <div>
-          <video src={video} width="750" height="500" controls></video>
-        </div>
-        <div>
-          <video src={video} width="750" height="500" controls></video>
-        </div> */}
-      </div>
       </div>
     </div>
   )
