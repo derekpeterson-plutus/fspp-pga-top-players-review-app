@@ -61,7 +61,7 @@ const NavBar = ({showModal, setShowModal}) => {
             {navbar ? <FaTimes size={18} /> : <FaBars size={18} />}
           </div>
           {navbar && (
-            <ul className='flex flex-col z-10 justify-center items-center absolute top-0 left-0 w-full h-screen bg-[#062146] text-[rgb(186,185,185)]'>
+            <ul className='flex flex-col z-10 justify-center items-center fixed w-full h-full right-0 bottom-0 bg-[#062146] text-[rgb(186,185,185)]'>
               {links.map(({ id, link }) => (
                 <li
                   key={id}
